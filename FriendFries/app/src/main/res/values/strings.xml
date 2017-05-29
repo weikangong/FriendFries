@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FriendFries</string>
+    <string name="Host">Host</string>
+    <string name="Join">Join</string>
+    <string name="Settings">Settings</string>
+    <string name="FriendFries">Friend Fries</string>
+</resources>
