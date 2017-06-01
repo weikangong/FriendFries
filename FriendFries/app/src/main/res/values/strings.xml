@@ -4,4 +4,7 @@
     <string name="Join">Join</string>
     <string name="Settings">Settings</string>
     <string name="FriendFries">Friend Fries</string>
+    <string name="enter_room_code">Enter Room Code</string>
+    <string name="join_room">Join Room</string>
+    <string name="Back">Back</string>
 </resources>

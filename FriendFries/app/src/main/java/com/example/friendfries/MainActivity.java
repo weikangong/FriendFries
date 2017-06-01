@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void startJoin(View view) {
-        Intent intent = new Intent(this, HostActivity.class);
+        Intent intent = new Intent(this, JoinActivity.class);
         startActivity(intent);
     }
     public void startSettings(View view) {
