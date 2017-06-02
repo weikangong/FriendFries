@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HostActivity" />
-        <activity android:name=".JoinActivity"></activity>
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".RoomActivity"></activity>
     </application>
 
 </manifest>
