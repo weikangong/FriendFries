@@ -4,64 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.friendfries.MainActivity"
-    tools:layout_editor_absoluteY="81dp"
-    tools:layout_editor_absoluteX="0dp">
+    tools:context="com.example.friendfries.SettingsActivity">
 
     <TextView
-        android:id="@+id/FriendFries"
+        android:id="@+id/settings_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/FriendFries"
+        android:text="@string/Settings"
         android:textAppearance="@android:style/TextAppearance.Material.Display2"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <Button
-        android:id="@+id/Settings"
-        android:layout_width="138dp"
-        android:layout_height="79dp"
-        android:layout_marginBottom="16dp"
+    <EditText
+        android:id="@+id/playerName"
+        android:layout_width="306dp"
+        android:layout_height="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/player_name_editable"
+        android:textAlignment="center"
+        android:textSize="24sp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="startSettings"
-        android:text="@string/Settings"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/settings_text" />
+
+    <Button
+        android:id="@+id/SetName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_name"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="changePlayerName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Join" />
+        app:layout_constraintTop_toBottomOf="@+id/playerName"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintVertical_bias="0.039" />
 
     <Button
-        android:id="@+id/Join"
+        android:id="@+id/Back_button"
         android:layout_width="138dp"
         android:layout_height="79dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="startJoin"
-        android:text="@string/Join"
-        app:layout_constraintHorizontal_bias="0.502"
+        android:text="@string/Back"
+        android:onClick="backToMain"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Host" />
-
-    <Button
-        android:id="@+id/Host"
-        android:layout_width="138dp"
-        android:layout_height="79dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:onClick="startHost"
-        android:text="@string/Host"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FriendFries" />
-
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>

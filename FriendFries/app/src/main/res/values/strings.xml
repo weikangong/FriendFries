@@ -7,4 +7,6 @@
     <string name="enter_room_code">Enter Room Code</string>
     <string name="join_room">Join Room</string>
     <string name="Back">Back</string>
+    <string name="player_name_editable">Player Name</string>
+    <string name="set_name">Set Name</string>
 </resources>
