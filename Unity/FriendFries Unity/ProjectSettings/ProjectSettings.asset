@@ -10,8 +10,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: importtest
-  productName: Test
+  companyName: SaltyPotato
+  productName: FriendFries
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -137,7 +137,7 @@ PlayerSettings:
   protectGraphicsMemory: 0
   useHDRDisplay: 0
   applicationIdentifier:
-    Android: com.importtest.Test
+    Android: com.SaltyPotato.FriendFries
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -583,12 +583,12 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
+    Collab: 0
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: c05cde26-4462-4e71-b641-2aed813741b3
-  projectName: Test
+  cloudProjectId: b961365e-e8d8-42ee-899f-ca0802b5780a
+  projectName: FriendFries
   organizationId: vicisapotato
   cloudEnabled: 0
   enableNewInputSystem: 0
