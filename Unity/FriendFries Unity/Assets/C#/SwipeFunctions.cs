@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Swiping any object with tag "potato" will cause object to move in direction.
+//No diagonal directions. will move only if object is touched.
+
 public class SwipeFunctions : MonoBehaviour {
 
 	public GameObject Player;
+
 	public float maxTime; //max time of which exceeding is not counted as a swipe
 	public float minSwipeDist; //min swipe distance of which not reaching is not counted as a swipe
 
@@ -16,6 +20,8 @@ public class SwipeFunctions : MonoBehaviour {
 
 	float swipeDist; //swipe distance btw two points
 	float swipeTime;
+
+	bool potatoTouched = false;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +39,12 @@ public class SwipeFunctions : MonoBehaviour {
 				startTime = Time.time;
 				startPos = touch.position;
 
+				//check if object is touched
+				Vector2 test = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+				if(Physics2D.Raycast(test, (Input.GetTouch(0).position)).collider.tag == "Potato") {
+					potatoTouched = true;
+					Debug.Log("Potato touched");
+				}
 			} 
 
 			else if (touch.phase == TouchPhase.Ended) {
@@ -43,14 +55,15 @@ public class SwipeFunctions : MonoBehaviour {
 				swipeDist = (endPos - startPos).magnitude;
 				swipeTime = endTime - startTime;
 
-				if ((swipeTime < maxTime) && (swipeDist > minSwipeDist)) {
+				if ((swipeTime < maxTime) && (swipeDist > minSwipeDist) && potatoTouched) {
 					swipe ();
+					potatoTouched = false;
 				}
 			}
-		}	
+		}
 	}
 
-	void swipe(){
+	void swipe() {
 		
 		Vector2 distance = endPos - startPos;
 		if (Mathf.Abs (distance.x) > Mathf.Abs (distance.y)) {

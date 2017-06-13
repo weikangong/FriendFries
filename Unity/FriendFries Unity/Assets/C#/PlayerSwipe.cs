@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerSwipe : MonoBehaviour {
+//give this component to player objects meant to be swiped
+//object must have rigidbody component
 
+public class PlayerSwipe : MonoBehaviour {
 
 	Rigidbody2D rb;
 	public float upForce;
