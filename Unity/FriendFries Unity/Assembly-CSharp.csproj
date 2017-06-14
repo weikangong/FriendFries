@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\C#\DragFunctions.cs" />
+     <Compile Include="Assets\C#\ExitWallTrigger.cs" />
      <Compile Include="Assets\C#\MovingLeftRightByTouch.cs" />
      <Compile Include="Assets\C#\PlayerDrag.cs" />
      <Compile Include="Assets\C#\PlayerSwipe.cs" />

@@ -120,8 +120,8 @@ GameObject:
   - component: {fileID: 64614165}
   - component: {fileID: 64614164}
   m_Layer: 0
-  m_Name: QuadRightSwipeTester
-  m_TagString: Untagged
+  m_Name: RightWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,12 +214,13 @@ GameObject:
   - component: {fileID: 428307567}
   - component: {fileID: 428307566}
   - component: {fileID: 428307565}
+  - component: {fileID: 428307569}
   m_Layer: 0
-  m_Name: QuadCeilingSwipeTester
-  m_TagString: Untagged
+  m_Name: Ceiling
+  m_TagString: Ceiling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!61 &428307565
 BoxCollider2D:
@@ -230,7 +231,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -244,7 +245,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.99999994, y: 1}
   m_EdgeRadius: 0
 --- !u!23 &428307566
 MeshRenderer:
@@ -298,6 +299,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428307569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 428307564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchedExitWall: 0
+  nextLevel: DragTestScene
+  waitTime: 2
+  fontSize: 48
+  nextPlayerMessage: Success
 --- !u!1 &1055829933
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,8 +327,8 @@ GameObject:
   - component: {fileID: 1055829935}
   - component: {fileID: 1055829934}
   m_Layer: 0
-  m_Name: 'QuadLeftSwipeTester '
-  m_TagString: Untagged
+  m_Name: LeftWall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,8 +422,8 @@ GameObject:
   - component: {fileID: 1163747282}
   - component: {fileID: 1163747281}
   m_Layer: 0
-  m_Name: QuadFloorSwipeTester
-  m_TagString: Untagged
+  m_Name: Floor
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,7 +715,7 @@ GameObject:
   - component: {fileID: 1865907730}
   - component: {fileID: 1865907729}
   m_Layer: 0
-  m_Name: fry
+  m_Name: Fry
   m_TagString: Potato
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

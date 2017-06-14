@@ -36,6 +36,10 @@ public class DragFunctions : MonoBehaviour {
 					drag (touch, dragSpeed);
 				}
 			}
+
+			if (touch.phase == TouchPhase.Ended) {
+				potatoTouched = false;
+			}
 		}
 	}
 

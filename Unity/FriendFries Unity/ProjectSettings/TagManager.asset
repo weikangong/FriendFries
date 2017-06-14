@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Potato
+  - Wall
+  - Ceiling
+  - Floor
   layers:
   - Default
   - TransparentFX

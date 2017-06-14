@@ -8,13 +8,14 @@ public class PlayerDrag : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+			
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+		
 
 	public void Drag(Touch touch, float dragSpeed){
 		// get the touch position from the screen touch to world point
