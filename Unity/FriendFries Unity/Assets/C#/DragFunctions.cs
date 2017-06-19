@@ -46,4 +46,5 @@ public class DragFunctions : MonoBehaviour {
 	void drag(Touch touch, float dragSpeed) {
 		Player.GetComponent<PlayerDrag> ().Drag (touch, dragSpeed);
 	}
+		
 }

@@ -23,5 +23,7 @@ public class PlayerDrag : MonoBehaviour {
 
 		// lerp and set the position of the current object to that of the touch, but smoothly over time.
 		transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * dragSpeed);
+
 	}
+		
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExitWallTrigger : MonoBehaviour {
 
-	public bool touchedExitWall = false;
+	bool touchedExitWall = false;
 	public string nextLevel;
 	public float waitTime;
 	public int fontSize;

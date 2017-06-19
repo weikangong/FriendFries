@@ -20,6 +20,8 @@ public class MovingLeftRightByTouch : MonoBehaviour {
 		float LeftRight = 0;
 
 		if(Input.touchCount > 0){
+			Touch touch = Input.GetTouch(0);
+
 			// touch x position is bigger than half of the screen, moving right
 			if (Input.GetTouch (0).position.x > Screen.width / 2) {
 				Debug.Log ("Right side screen touch detected");
@@ -29,6 +31,10 @@ public class MovingLeftRightByTouch : MonoBehaviour {
 			else if (Input.GetTouch (0).position.x < Screen.width / 2) {
 				Debug.Log ("Left side screen touch detected");
 				LeftRight = -1;
+			}
+
+			if (touch.phase == TouchPhase.Ended) {
+				rb.velocity = Vector3.zero;
 			}
 		}
 

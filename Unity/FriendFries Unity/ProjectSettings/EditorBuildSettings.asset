@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SwipeTestScene.unity
     guid: 6350b5334de99604683f92b8a3b9ac66
+  - enabled: 1
+    path: Assets/Scenes/CatchTestScene.unity
+    guid: 56900a4b8e3f30746ac76ac8ee6bc883
