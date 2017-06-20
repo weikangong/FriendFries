@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ExitWallTrigger : MonoBehaviour {
 
+	public bool goNextLvl;
 	bool touchedExitWall = false;
-	public string nextLevel;
+	public string nextLevelName;
 	public float waitTime;
 	public int fontSize;
 
@@ -20,13 +21,14 @@ public class ExitWallTrigger : MonoBehaviour {
 		}
 
 		//changes scene
-		StartCoroutine("Wait");
-
+		if (goNextLvl) {
+			StartCoroutine ("Wait");
+		}
 	}
 
 	IEnumerator Wait() {
 		yield return new WaitForSecondsRealtime (waitTime);
-		Application.LoadLevel (nextLevel);
+		Application.LoadLevel (nextLevelName);
 	}
 
 	void OnGUI() {

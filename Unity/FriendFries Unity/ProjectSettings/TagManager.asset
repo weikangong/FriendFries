@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Ceiling
   - Floor
+  - Cheese
   layers:
   - Default
   - TransparentFX
@@ -43,11 +44,11 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 3897752335
+    uniqueID: 3906155175
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Foreground
-    uniqueID: 2936037453
+    uniqueID: 2392019987
     locked: 0

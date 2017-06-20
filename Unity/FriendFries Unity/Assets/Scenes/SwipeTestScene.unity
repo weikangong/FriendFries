@@ -310,10 +310,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchedExitWall: 0
-  nextLevel: DragTestScene
+  goNextLvl: 1
+  nextLevelName: DragTestScene
   waitTime: 2
-  fontSize: 48
+  fontSize: 45
   nextPlayerMessage: Success
 --- !u!1 &1055829933
 GameObject:

@@ -190,7 +190,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -225,8 +225,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -388812121
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2366862884382e845b53273947f02f6b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -279,7 +279,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.000000029802322, y: -2.622903}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -290,7 +290,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1492956, y: 6.245806}
   m_EdgeRadius: 0
 --- !u!23 &615404531
 MeshRenderer:
@@ -338,8 +338,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615404529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 1.52, z: 0.45898438}
-  m_LocalScale: {x: 5.7199774, y: 0.41855782, z: 1}
+  m_LocalPosition: {x: -0, y: 0.89, z: 0.45898438}
+  m_LocalScale: {x: 5.7478914, y: 0.93910295, z: 1.00488}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1681854889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2086dd16031861f49b2bddf51a72b09a, type: 3}
+  m_Script: {fileID: 11500000, guid: e12ba9fdc16235746b95e3147730a93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 2034752240}
@@ -724,7 +724,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1681854889}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.0759163, y: 0.39845285, z: 0.45898438}
+  m_LocalPosition: {x: 0.16, y: -2.34, z: 0.45898438}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -743,9 +743,10 @@ GameObject:
   - component: {fileID: 2034752242}
   - component: {fileID: 2034752241}
   - component: {fileID: 2034752246}
+  - component: {fileID: 2034752247}
   m_Layer: 0
   m_Name: Cheese
-  m_TagString: Potato
+  m_TagString: Cheese
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -832,7 +833,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034752240}
   m_LocalRotation: {x: -0.0024559025, y: -0.0024929766, z: -0.70710254, w: 0.7071024}
-  m_LocalPosition: {x: 0, y: 3.29, z: 0.55}
+  m_LocalPosition: {x: -0, y: 2.36, z: 0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -858,6 +859,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2034752247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2034752240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5373a5eb8ff41ae4797f94c66a20f5af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!1 &2095881890
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,7 +982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: CatchTestScene
+  goNextLvl: 1
+  nextLevelName: CatchTestScene
   waitTime: 2
-  fontSize: 48
+  fontSize: 45
   nextPlayerMessage: Success
