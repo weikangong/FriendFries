@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SwipeTestScene.unity
+- path: Assets/Scenes/SqueezeTestScene.unity
   isLoaded: 1
   isActive: 1

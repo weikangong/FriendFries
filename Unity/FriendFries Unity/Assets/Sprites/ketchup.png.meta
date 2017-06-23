@@ -1,14 +1,14 @@
 fileFormatVersion: 2
 guid: 0512715ea8ce62248a015df382f87287
-timeCreated: 1497252382
+timeCreated: 1498204023
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: ketchup_0
-    21300002: ketchup_1
-    21300004: ketchup_2
-    21300006: ketchup_3
-    21300008: ketchup_4
+    21300002: ketchup3
+    21300004: ketchup1
+    21300006: ketchup4
+    21300008: ketchup2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -96,11 +96,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ketchup_1
+      name: ketchup3
       rect:
         serializedVersion: 2
-        x: 212
-        y: 135
+        x: 221
+        y: 129
         width: 161
         height: 323
       alignment: 0
@@ -109,7 +109,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ketchup_2
+      name: ketchup1
       rect:
         serializedVersion: 2
         x: 608
@@ -122,11 +122,11 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ketchup_3
+      name: ketchup4
       rect:
         serializedVersion: 2
-        x: 14
-        y: 133
+        x: 18
+        y: 129
         width: 160
         height: 323
       alignment: 0
@@ -135,7 +135,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: ketchup_4
+      name: ketchup2
       rect:
         serializedVersion: 2
         x: 411

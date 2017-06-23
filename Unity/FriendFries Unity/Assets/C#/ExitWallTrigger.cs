@@ -38,7 +38,7 @@ public class ExitWallTrigger : MonoBehaviour {
 		centeredStyle.fontSize = fontSize;
 
 		if (touchedExitWall) {
-			GUI.Label (new Rect (Screen.width/2, Screen.height/2, 200, 100), nextPlayerMessage, centeredStyle);
+			GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), nextPlayerMessage, centeredStyle);
 		}
 	}
 }

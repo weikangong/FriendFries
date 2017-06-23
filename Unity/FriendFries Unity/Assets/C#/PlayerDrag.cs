@@ -22,8 +22,8 @@ public class PlayerDrag : MonoBehaviour {
 		Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, 10));
 
 		// lerp and set the position of the current object to that of the touch, but smoothly over time.
-		transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * dragSpeed);
-
+		//transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * dragSpeed);
+		transform.position = touchedPos;
 	}
 		
 }
