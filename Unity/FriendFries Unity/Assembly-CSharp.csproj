@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\C#\DestroyOnContact.cs" />
-     <Compile Include="Assets\C#\DontGoThroughThings.cs" />
      <Compile Include="Assets\C#\DragFunctions.cs" />
      <Compile Include="Assets\C#\ExitWallTrigger.cs" />
      <Compile Include="Assets\C#\MovingLeftRightByTouch.cs" />

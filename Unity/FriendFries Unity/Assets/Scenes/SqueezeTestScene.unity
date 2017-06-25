@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goNextLvl: 1
+  goNextLvl: 0
   nextLevelName: CatchTestScene
   waitTime: 2
   fontSize: 45
