@@ -11,9 +11,13 @@ public class DragFunctions : MonoBehaviour {
 	public float dragSpeed;
 	bool cheeseTouched = false;
 
+	public Rigidbody rb;
+	public ParticleSystem cheeseEmit;
+
 	// Use this for initialization
 	void Start () {
-		
+		rb = gameObject.GetComponent<Rigidbody> ();
+		cheeseEmit = gameObject.GetComponentInChildren<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +45,14 @@ public class DragFunctions : MonoBehaviour {
 				cheeseTouched = false;
 			}
 		}
+
+		if (rb.velocity.magnitude > 0) {
+			cheeseEmit.Emit (1);
+		}
+		if (rb.velocity.magnitude <= 0) {
+			cheeseEmit.Stop ();
+		}
+
 	}
 
 	void drag(Touch touch, float dragSpeed) {

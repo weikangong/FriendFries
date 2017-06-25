@@ -20,9 +20,12 @@ public class PinchFunction : MonoBehaviour {
 	private SpriteRenderer myRenderer;
 	public Sprite[] bottle;
 
+	public ParticleSystem ketchupEmit;
+
 	// Use this for initialization
 	void Start () {
 		myRenderer = gameObject.GetComponent<SpriteRenderer> ();
+		ketchupEmit = gameObject.GetComponentInChildren<ParticleSystem> ();
 	}
 	
 	// Update is called once per frame
@@ -60,6 +63,7 @@ public class PinchFunction : MonoBehaviour {
 				//still has ketchup
 				if (ketchupLeft > 0) {
 					noMoreKetchup = false;
+					ketchupEmit.Emit (1);
 				}
 
 				//no more ketchup
@@ -75,6 +79,10 @@ public class PinchFunction : MonoBehaviour {
 				pinched = false;
 				Debug.Log ("Pinched Stopped");
 			}
+		}
+
+		if (!pinched) {
+			ketchupEmit.Stop ();
 		}
 
 		if (ketchupLeft <= 100 && ketchupLeft > 75){

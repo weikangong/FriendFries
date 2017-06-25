@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //give this component to player objects meant to be dragged
+//object will move wherever dragged
 
 public class PlayerDrag : MonoBehaviour {
 

@@ -46,7 +46,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\C#\CheeseEmission.cs" />
      <Compile Include="Assets\C#\DestroyOnContact.cs" />
      <Compile Include="Assets\C#\DontGoThroughThings.cs" />
      <Compile Include="Assets\C#\DragFunctions.cs" />

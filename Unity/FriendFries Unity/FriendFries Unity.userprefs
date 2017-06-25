@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\C#\PinchFunction.cs">
     <Files>
-      <File FileName="Assets\C#\CheeseEmission.cs" Line="7" Column="4" />
-      <File FileName="Assets\C#\PinchFunction.cs" Line="102" Column="31" />
       <File FileName="Assets\C#\ExitWallTrigger.cs" Line="45" Column="1" />
+      <File FileName="Assets\C#\PinchFunction.cs" Line="18" Column="1" />
+      <File FileName="Assets\C#\DragFunctions.cs" Line="52" Column="28" />
+      <File FileName="Assets\C#\PlayerDrag.cs" Line="6" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
