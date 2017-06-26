@@ -14,7 +14,8 @@ public class PinchFunction : MonoBehaviour {
 
 	bool pinched = false; 
 
-	public float ketchupLeft = 100;
+	public float totalKetchup;
+	float ketchupLeft;
 	bool noMoreKetchup = false;
 
 	private SpriteRenderer myRenderer;
@@ -24,6 +25,7 @@ public class PinchFunction : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		ketchupLeft = totalKetchup;
 		myRenderer = gameObject.GetComponent<SpriteRenderer> ();
 		ketchupEmit = gameObject.GetComponentInChildren<ParticleSystem> ();
 	}
@@ -56,14 +58,13 @@ public class PinchFunction : MonoBehaviour {
 				}
 			}
 
+			//decrease ketchup when pinched
 			if (pinched) {
-				//pinch function here
 				ketchupLeft--;
 
 				//still has ketchup
 				if (ketchupLeft > 0) {
 					noMoreKetchup = false;
-					ketchupEmit.Emit (1);
 				}
 
 				//no more ketchup
@@ -81,19 +82,24 @@ public class PinchFunction : MonoBehaviour {
 			}
 		}
 
-		if (!pinched) {
+		//particle system, only emits when pinched and has ketchup
+		if (pinched && !noMoreKetchup) {
+			ketchupEmit.Emit (1);
+		}
+		if (!pinched || noMoreKetchup) {
 			ketchupEmit.Stop ();
 		}
 
-		if (ketchupLeft <= 100 && ketchupLeft > 75){
+		//shows sprite respective to amt of ketchup left
+		if (ketchupLeft <= totalKetchup && ketchupLeft > (3/4)*totalKetchup){
 			myRenderer.sprite = bottle[0];
 		}
 
-		if (ketchupLeft <= 75 && ketchupLeft > 50){
+		if (ketchupLeft <= (3/4)*totalKetchup && ketchupLeft > (2/4)*totalKetchup){
 			myRenderer.sprite = bottle[1];
 		}
 
-		if (ketchupLeft <= 50 && ketchupLeft > 25){
+		if (ketchupLeft <= (2/4)*totalKetchup && ketchupLeft > (1/4)*totalKetchup){
 			myRenderer.sprite = bottle[2];
 		}
 

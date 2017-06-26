@@ -3856,7 +3856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f8b783bb4e58344bd36e0cfca81d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ketchupLeft: 100
+  totalKetchup: 100
   bottle:
   - {fileID: 21300004, guid: 0512715ea8ce62248a015df382f87287, type: 3}
   - {fileID: 21300008, guid: 0512715ea8ce62248a015df382f87287, type: 3}
