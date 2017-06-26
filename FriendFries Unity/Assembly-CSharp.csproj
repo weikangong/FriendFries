@@ -46,15 +46,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\C#\DestroyOnContact.cs" />
-     <Compile Include="Assets\C#\DragFunctions.cs" />
-     <Compile Include="Assets\C#\ExitWallTrigger.cs" />
-     <Compile Include="Assets\C#\MovingLeftRightByTouch.cs" />
-     <Compile Include="Assets\C#\NewDragFunction.cs" />
-     <Compile Include="Assets\C#\PinchFunction.cs" />
-     <Compile Include="Assets\C#\PlayerDrag.cs" />
-     <Compile Include="Assets\C#\PlayerSwipe.cs" />
-     <Compile Include="Assets\C#\SwipeFunctions.cs" />
+     <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
+     <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
+     <Compile Include="Assets\Game C#\GameStart.cs" />
+     <Compile Include="Assets\Game C#\MovingLeftRightByTouch.cs" />
+     <Compile Include="Assets\Game C#\NewDragFunction.cs" />
+     <Compile Include="Assets\Game C#\PinchFunction.cs" />
+     <Compile Include="Assets\Game C#\PlayerDrag.cs" />
+     <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
+     <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
+     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
+     <Compile Include="Assets\Scripts\ApplicationManager.cs" />
+     <Compile Include="Assets\Scripts\ChangeColor.cs" />
+     <Compile Include="Assets\Scripts\DragMe.cs" />
+     <Compile Include="Assets\Scripts\DragPanel.cs" />
+     <Compile Include="Assets\Scripts\DropMe.cs" />
+     <Compile Include="Assets\Scripts\PanelManager.cs" />
+     <Compile Include="Assets\Scripts\ResizePanel.cs" />
+     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
+     <Compile Include="Assets\Scripts\TiltWindow.cs" />
+     <Compile Include="Assets\Scripts\loadSceneOnClick.cs" />
+     <None Include="Assets\Main Menu\Fonts\Jupiter\LICENSE.txt" />
+     <None Include="Assets\Main Menu\Textures and Sprites\SF UI\Background\LICENSE.txt" />
+     <None Include="Assets\Main Menu\Materials\UI-Default-No-Alpha.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
