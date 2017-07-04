@@ -9,6 +9,7 @@ TagManager:
   - Ceiling
   - Floor
   - Cheese
+  - Ketchup
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - Background
   - Foreground
-  - 
-  - 
+  - NoCollideA
+  - NoCollideB
   - 
   - 
   - 

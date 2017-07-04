@@ -1,0 +1,39 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CollisionCounter : MonoBehaviour {
+
+	bool enoughFlavour = false;
+	public float minFlavour;
+	int colCount = 0;
+	// Use this for initialization
+	void Start () {
+		
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if (colCount >= minFlavour) {
+			enoughFlavour = true;
+		}
+	}
+
+	void OnParticleCollision(GameObject other) {
+		Debug.Log ("Collision Detected");
+		colCount ++;
+		Debug.Log ("no. of collisions: " + colCount);
+	}
+
+	void OnGUI() {
+
+		var centeredStyle = GUI.skin.GetStyle("Label");
+		centeredStyle.alignment = TextAnchor.UpperCenter;
+		centeredStyle.fontSize = 45;
+
+		if (enoughFlavour) {
+			GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), "enough", centeredStyle);
+		}
+	}
+
+}

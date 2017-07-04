@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game C#\CollisionCounter.cs" />
      <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
      <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
      <Compile Include="Assets\Game C#\GameStart.cs" />
@@ -55,18 +56,18 @@
      <Compile Include="Assets\Game C#\PlayerDrag.cs" />
      <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
      <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
-     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
-     <Compile Include="Assets\Scripts\ApplicationManager.cs" />
-     <Compile Include="Assets\Scripts\ChangeColor.cs" />
-     <Compile Include="Assets\Scripts\DragMe.cs" />
-     <Compile Include="Assets\Scripts\DragPanel.cs" />
-     <Compile Include="Assets\Scripts\DropMe.cs" />
-     <Compile Include="Assets\Scripts\PanelManager.cs" />
-     <Compile Include="Assets\Scripts\ResizePanel.cs" />
-     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
-     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
-     <Compile Include="Assets\Scripts\TiltWindow.cs" />
-     <Compile Include="Assets\Scripts\loadSceneOnClick.cs" />
+     <Compile Include="Assets\Menu Scripts\ActiveStateToggler.cs" />
+     <Compile Include="Assets\Menu Scripts\ApplicationManager.cs" />
+     <Compile Include="Assets\Menu Scripts\ChangeColor.cs" />
+     <Compile Include="Assets\Menu Scripts\DragMe.cs" />
+     <Compile Include="Assets\Menu Scripts\DragPanel.cs" />
+     <Compile Include="Assets\Menu Scripts\DropMe.cs" />
+     <Compile Include="Assets\Menu Scripts\PanelManager.cs" />
+     <Compile Include="Assets\Menu Scripts\ResizePanel.cs" />
+     <Compile Include="Assets\Menu Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Menu Scripts\ShowSliderValue.cs" />
+     <Compile Include="Assets\Menu Scripts\TiltWindow.cs" />
+     <Compile Include="Assets\Menu Scripts\loadSceneOnClick.cs" />
      <None Include="Assets\Main Menu\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\Main Menu\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\Main Menu\Materials\UI-Default-No-Alpha.shader" />

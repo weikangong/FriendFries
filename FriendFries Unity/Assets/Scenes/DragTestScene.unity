@@ -316,7 +316,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072246773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.11, y: -0.32, z: 0}
+  m_LocalPosition: {x: -0.02, y: -0.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2034752245}
@@ -427,10 +427,10 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2128201233
+  randomSeed: 1821784710
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -519,8 +519,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.9264706, g: 0.9150071, b: 0.51092124, a: 1}
-      maxColor: {r: 0.83823526, g: 0.7668237, b: 0.1910683, a: 1}
+      minColor: {r: 0.9338235, g: 0.9234056, b: 0.5561743, a: 1}
+      maxColor: {r: 0.8308824, g: 0.73262584, b: 0.18328287, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -582,7 +582,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.51
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -873,14 +873,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 4
     enabled: 1
-    type: 4
+    type: 12
     angle: 25
     length: 5
     boxX: 1
     boxY: 1
     boxZ: 1
     radius:
-      value: 0.56184983
+      value: 1.2091391
       mode: 0
       spread: 0
       speed:
@@ -987,7 +987,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 10
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2481,10 +2481,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
@@ -2615,15 +2615,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
-    radiusScale: 1
+    maxKillSpeed: 0
+    radiusScale: 0.54
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 2048
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
@@ -3723,7 +3723,8 @@ GameObject:
   - component: {fileID: 1808634703}
   - component: {fileID: 1808634702}
   - component: {fileID: 1808634701}
-  m_Layer: 0
+  - component: {fileID: 1808634705}
+  m_Layer: 11
   m_Name: fry
   m_TagString: Potato
   m_Icon: {fileID: 0}
@@ -3739,7 +3740,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3847,12 +3848,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1808634700}
   m_LocalRotation: {x: -0, y: -0, z: -0.120052524, w: 0.9927676}
-  m_LocalPosition: {x: 0.17, y: 11.07, z: 1}
+  m_LocalPosition: {x: 0.38, y: 11.22, z: 1}
   m_LocalScale: {x: 0.8475257, y: 1.0967578, z: 0.8692571}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13.790001}
+--- !u!114 &1808634705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808634700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd980d88d704484a828887d5c962b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlavour: 5
 --- !u!1 &2034752240
 GameObject:
   m_ObjectHideFlags: 0
@@ -3865,7 +3878,7 @@ GameObject:
   - component: {fileID: 2034752243}
   - component: {fileID: 2034752244}
   - component: {fileID: 2034752242}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cheese
   m_TagString: Cheese
   m_Icon: {fileID: 0}
@@ -3975,7 +3988,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034752240}
   m_LocalRotation: {x: -0.0034993861, y: -0.00002621533, z: -0.00000009173812, w: 0.9999939}
-  m_LocalPosition: {x: -0.02, y: 3.82, z: 0.55}
+  m_LocalPosition: {x: -0.02, y: 3.27, z: 0.57}
   m_LocalScale: {x: 0.7927475, y: 0.7927475, z: 0.7927475}
   m_Children:
   - {fileID: 1072246774}
@@ -4089,7 +4102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goNextLvl: 1
+  goNextLvl: 0
   nextLevelName: SqueezeTestScene
   waitTime: 2
   fontSize: 45

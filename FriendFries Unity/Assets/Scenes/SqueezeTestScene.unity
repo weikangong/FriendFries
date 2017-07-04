@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 88719995}
   m_Layer: 0
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: Ketchup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1534577357
+  randomSeed: 675903773
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2297,10 +2297,10 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
-    type: 0
-    collisionMode: 0
+    type: 1
+    collisionMode: 1
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
@@ -2431,15 +2431,15 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 256
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
@@ -3350,7 +3350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goNextLvl: 1
+  goNextLvl: 0
   nextLevelName: CatchTestScene
   waitTime: 2
   fontSize: 45
@@ -3603,7 +3603,8 @@ GameObject:
   - component: {fileID: 1151157484}
   - component: {fileID: 1151157483}
   - component: {fileID: 1151157482}
-  m_Layer: 0
+  - component: {fileID: 1151157486}
+  m_Layer: 8
   m_Name: fry
   m_TagString: Potato
   m_Icon: {fileID: 0}
@@ -3619,7 +3620,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3727,12 +3728,24 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1151157481}
   m_LocalRotation: {x: -0, y: -0, z: -0.120052524, w: 0.9927676}
-  m_LocalPosition: {x: 0.17, y: 11.07, z: 1}
+  m_LocalPosition: {x: 0.25, y: 9.51, z: 1}
   m_LocalScale: {x: 0.8475257, y: 1.0967578, z: 0.8692571}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -13.790001}
+--- !u!114 &1151157486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1151157481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd980d88d704484a828887d5c962b4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlavour: 7
 --- !u!1 &1616535270
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,7 +3869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f8b783bb4e58344bd36e0cfca81d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalKetchup: 100
+  ketchupLeft: 100
   bottle:
   - {fileID: 21300004, guid: 0512715ea8ce62248a015df382f87287, type: 3}
   - {fileID: 21300008, guid: 0512715ea8ce62248a015df382f87287, type: 3}
