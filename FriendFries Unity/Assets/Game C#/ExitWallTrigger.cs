@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExitWallTrigger : MonoBehaviour {
 
 	public bool goNextLvl;
-	bool touchedExitWall = false;
+	bool allTouchedExitWall = false;
 	public string nextLevelName;
 	public float waitTime;
 	public int fontSize;
@@ -13,13 +13,19 @@ public class ExitWallTrigger : MonoBehaviour {
 	public string nextPlayerMessage;
 
 	void OnTriggerEnter2D(Collider2D other) {
-		touchedExitWall = true;
+		
 		Debug.Log ("Collision with exit wall detected: " + other.gameObject.name);
 
 		if (other.gameObject.tag == "Potato") {
 			Destroy (other.gameObject);
 		}
 
+		GameObject frySpawner = GameObject.Find ("frySpawner");
+		SpawnObjects fryScript = frySpawner.GetComponent<SpawnObjects> ();
+
+		if(fryScript.friesLeft <= 0) {
+			allTouchedExitWall = true;
+		}
 		//changes scene
 		if (goNextLvl) {
 			StartCoroutine ("Wait");
@@ -37,7 +43,7 @@ public class ExitWallTrigger : MonoBehaviour {
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		centeredStyle.fontSize = fontSize;
 
-		if (touchedExitWall) {
+		if (allTouchedExitWall) {
 			GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), nextPlayerMessage, centeredStyle);
 		}
 	}

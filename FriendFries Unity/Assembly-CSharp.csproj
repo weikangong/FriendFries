@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Game C#\CollisionCounter.cs" />
+     <Compile Include="Assets\Game C#\CountCaughtFries.cs" />
      <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
      <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
      <Compile Include="Assets\Game C#\GameStart.cs" />

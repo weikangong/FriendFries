@@ -52,7 +52,7 @@ public class SpawnObjects : MonoBehaviour {
 
 
 		// Creates the random object at the random 2D position.
-		Debug.Log ("Spawning Fry, Fries left: " + friesLeft);
+		Debug.Log ("Spawning Fry: " + friesLeft);
 		Instantiate (fries, pos, rot);
 	
 	}
