@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CountCaughtFries : MonoBehaviour {
 
+	public GameObject Score;
+	public int points = 20;
+
 	int caughtCount = 0;
+
 	// Use this for initialization
 	void Start () {
 
@@ -21,13 +25,15 @@ public class CountCaughtFries : MonoBehaviour {
 		if (other.gameObject.tag == "Potato") {
 			Destroy (other.gameObject);
 			caughtCount ++;
+			//adds points for every successful catch
+			Score.GetComponent<ScoreSystem> ().updateScore (points);
 		}
 
 		Debug.Log ("no. of collisions: " + caughtCount);
 	}
 
-	void OnGUI() {
-
+/*	void OnGUI() {
+		//this is mostly only for debug
 		var centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		centeredStyle.fontSize = 45;
@@ -35,5 +41,6 @@ public class CountCaughtFries : MonoBehaviour {
 
 		GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), message, centeredStyle);
 
-	}
+
+	} */
 }

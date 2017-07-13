@@ -349,6 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8f4794b5a8488418d4ffdc37f3430b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Score: {fileID: 1455119362}
+  points: 20
 --- !u!1 &245367913
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +694,6 @@ GameObject:
   - component: {fileID: 865978071}
   - component: {fileID: 865978070}
   - component: {fileID: 865978069}
-  - component: {fileID: 865978068}
   m_Layer: 11
   m_Name: spawnFry
   m_TagString: Potato
@@ -700,18 +701,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &865978068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 865978067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afd980d88d704484a828887d5c962b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minFlavour: 4
 --- !u!60 &865978069
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -943,10 +932,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goNextLvl: 0
+  isLastLvl: 1
   nextLevelName: 
   waitTime: 0
   fontSize: 45
   nextPlayerMessage: Done!
+--- !u!1 &1455119362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1455119364}
+  - component: {fileID: 1455119363}
+  m_Layer: 0
+  m_Name: ScoreSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1455119363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455119362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d477f8a0de10b4ab73fe66ff19e514, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1455119364
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455119362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.089095294, y: 0.048921093, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1827480181
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ public class SpawnObjects : MonoBehaviour {
 		// Defines the min and max ranges for x and y
 		Vector2 pos = new Vector2 (Random.Range (xMin, xMax), Random.Range (yMin, yMax));
 		Quaternion rot = transform.localRotation;
-		rot = Quaternion.AngleAxis(Random.Range(0, 360), transform.forward) * transform.rotation;
+		rot = Quaternion.AngleAxis(Random.Range(-45, 45), transform.forward) * transform.rotation;
 
 
 		// Creates the random object at the random 2D position.

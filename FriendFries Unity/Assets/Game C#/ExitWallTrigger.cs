@@ -5,6 +5,7 @@ using UnityEngine;
 public class ExitWallTrigger : MonoBehaviour {
 
 	public bool goNextLvl;
+	public bool isLastLvl;
 	bool allTouchedExitWall = false;
 	public string nextLevelName;
 	public float waitTime;
@@ -27,8 +28,12 @@ public class ExitWallTrigger : MonoBehaviour {
 			allTouchedExitWall = true;
 		}
 		//changes scene
-		if (goNextLvl) {
+		if (goNextLvl && allTouchedExitWall) {
 			StartCoroutine ("Wait");
+		}
+
+		if (isLastLvl && allTouchedExitWall) {
+			//show end points 
 		}
 	}
 

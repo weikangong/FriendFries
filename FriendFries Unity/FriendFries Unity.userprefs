@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game C#\CountCaughtFries.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game C#\CollisionCounter.cs">
     <Files>
-      <File FileName="Assets\Game C#\ExitWallTrigger.cs" Line="21" Column="4" />
-      <File FileName="Assets\Game C#\SpawnObjects.cs" Line="55" Column="42" />
-      <File FileName="Assets\Game C#\CollisionCounter.cs" Line="10" Column="30" />
-      <File FileName="Assets\Game C#\CountCaughtFries.cs" Line="20" Column="3" />
+      <File FileName="Assets\Game C#\ExitWallTrigger.cs" Line="36" Column="22" />
+      <File FileName="Assets\Game C#\SpawnObjects.cs" Line="51" Column="50" />
+      <File FileName="Assets\Game C#\CollisionCounter.cs" Line="10" Column="1" />
+      <File FileName="Assets\Game C#\CountCaughtFries.cs" Line="8" Column="24" />
+      <File FileName="Assets\Game C#\ScoreSystem.cs" Line="7" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
