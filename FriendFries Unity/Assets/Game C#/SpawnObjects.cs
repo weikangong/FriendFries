@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SpawnObjects : MonoBehaviour {
 
-	//Array of objects to spawn (note I've removed the private goods variable)
+	//(Array of) objects to spawn
 	public GameObject fries;
-
 
 	//Time it takes to spawn theGoodies
 	[Space(3)]
@@ -44,7 +43,7 @@ public class SpawnObjects : MonoBehaviour {
 	}
 
 
-	void spawnFries() {
+	public void spawnFries() {
 		// Defines the min and max ranges for x and y
 		Vector2 pos = new Vector2 (Random.Range (xMin, xMax), Random.Range (yMin, yMax));
 		Quaternion rot = transform.localRotation;
@@ -53,7 +52,7 @@ public class SpawnObjects : MonoBehaviour {
 
 		// Creates the random object at the random 2D position.
 		Debug.Log ("Spawning Fry: " + friesLeft);
-		Instantiate (fries, pos, rot);
-	
+		GameObject fryClone = (GameObject)Instantiate (fries, pos, rot);
+
 	}
 }

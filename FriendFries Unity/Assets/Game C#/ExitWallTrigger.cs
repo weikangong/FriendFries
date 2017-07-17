@@ -6,6 +6,8 @@ public class ExitWallTrigger : MonoBehaviour {
 
 	public bool goNextLvl;
 	public bool isLastLvl;
+	public bool isFirstLvl;
+
 	bool allTouchedExitWall = false;
 	public string nextLevelName;
 	public float waitTime;
@@ -21,12 +23,24 @@ public class ExitWallTrigger : MonoBehaviour {
 			Destroy (other.gameObject);
 		}
 
-		GameObject frySpawner = GameObject.Find ("frySpawner");
-		SpawnObjects fryScript = frySpawner.GetComponent<SpawnObjects> ();
+		if (!isFirstLvl) {
+			GameObject frySpawner = GameObject.Find ("frySpawner");
+			SpawnObjects fryScript = frySpawner.GetComponent<SpawnObjects> ();
 
-		if(fryScript.friesLeft <= 0) {
-			allTouchedExitWall = true;
+			if (fryScript.friesLeft <= 0) {
+				allTouchedExitWall = true;
+			}
 		}
+
+		if (isFirstLvl) {
+			GameObject fryspawner = GameObject.Find ("SwipeTester");
+			SwipeFunctions fryScript = fryspawner.GetComponent<SwipeFunctions> ();
+
+			if (fryScript.friesLeft <= 0) {
+				allTouchedExitWall = true;
+			}
+		}
+
 		//changes scene
 		if (goNextLvl && allTouchedExitWall) {
 			StartCoroutine ("Wait");
