@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f11dac099638143a2907f05a535438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
 --- !u!114 &93229722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goNextLvl: 0
   isLastLvl: 1
+  isFirstLvl: 0
   nextLevelName: 
   waitTime: 0
   fontSize: 45

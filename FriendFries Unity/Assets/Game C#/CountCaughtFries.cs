@@ -5,7 +5,7 @@ using UnityEngine;
 public class CountCaughtFries : MonoBehaviour {
 
 	public GameObject Score;
-	public int points = 20;
+	public int points = 30;
 
 	int caughtCount = 0;
 

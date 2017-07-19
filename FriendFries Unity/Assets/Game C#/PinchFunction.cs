@@ -82,6 +82,8 @@ public class PinchFunction : MonoBehaviour {
 			}
 		}
 
+		//------------------------------------------------------------------------------------//
+
 		//particle system, only emits when pinched and has ketchup
 		if (pinched && !noMoreKetchup) {
 			ketchupEmit.Emit (1);

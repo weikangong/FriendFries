@@ -11,13 +11,12 @@ public class NewDragFunction : MonoBehaviour {
 	public float dragSpeed;
 	bool cheeseTouched = false;
 
+	public GameObject Grater;
 
-	Rigidbody2D rb;
 	ParticleSystem cheeseEmit;
 
 	// Use this for initialization
 	void Start () {
-		rb = Player.GetComponent<Rigidbody2D> ();
 		cheeseEmit = Player.GetComponentInChildren<ParticleSystem> ();
 	}
 
@@ -51,14 +50,18 @@ public class NewDragFunction : MonoBehaviour {
 			}
 		}
 
-		//particle system to only emit cheesebits when cheese is moving and in contact with grater < !!! contat part not done !!! 
-/*		if (rb.velocity.magnitude > 0) {
+		//----------------------------------------------------------------------------------//
+
+		//particle system
+
+		CheeseGrate grateScript = Grater.GetComponent<CheeseGrate> ();
+
+		if (grateScript.emitCheese) {
 			cheeseEmit.Emit (1);
-		}
-		if (rb.velocity.magnitude <= 0) {
+		} else {
 			cheeseEmit.Stop ();
 		}
-*/
+	
 	}
 
 	//calls drag function from player object
