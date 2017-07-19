@@ -51,6 +51,10 @@
      <Compile Include="Assets\Game C#\CountCaughtFries.cs" />
      <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
      <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
+     <Compile Include="Assets\Game C#\InfoAnimation\CatchInfoAnimate.cs" />
+     <Compile Include="Assets\Game C#\InfoAnimation\DragInfoAnimate.cs" />
+     <Compile Include="Assets\Game C#\InfoAnimation\SqueezeInfoAnimate.cs" />
+     <Compile Include="Assets\Game C#\InfoAnimation\SwipeInfoAnimate.cs" />
      <Compile Include="Assets\Game C#\MovingLeftRightByTouch.cs" />
      <Compile Include="Assets\Game C#\NewDragFunction.cs" />
      <Compile Include="Assets\Game C#\PinchFunction.cs" />

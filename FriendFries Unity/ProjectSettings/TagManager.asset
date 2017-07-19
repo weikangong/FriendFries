@@ -23,7 +23,7 @@ TagManager:
   - Foreground
   - NoCollideA
   - NoCollideB
-  - 
+  - Instructions
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2392019987
+    locked: 0
+  - name: Instruction
+    uniqueID: 366722235
     locked: 0
