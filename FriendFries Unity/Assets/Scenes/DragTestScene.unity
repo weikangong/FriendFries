@@ -262,7 +262,7 @@ Transform:
   m_LocalScale: {x: 0.8475257, y: 1.0967578, z: 0.8692571}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.495003}
 --- !u!1 &326894941
 GameObject:
@@ -357,8 +357,60 @@ Transform:
   m_LocalScale: {x: 6.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &421054145
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 421054146}
+  - component: {fileID: 421054147}
+  m_Layer: 0
+  m_Name: DragInfoText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &421054146
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421054145}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1, y: -1.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1455438117}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!132 &421054147
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421054145}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: Grate that cheese!
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 35
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &608275279
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &615404529
 GameObject:
@@ -507,7 +559,7 @@ Transform:
   m_LocalScale: {x: 1.1349919, y: 1.0093113, z: 1.00488}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -2.249, y: 180.736, z: -18.136002}
 --- !u!68 &615404534
 EdgeCollider2D:
@@ -907,7 +959,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -642157640
+  randomSeed: -507857779
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3985,7 +4037,7 @@ Transform:
   m_LocalScale: {x: 12.004235, y: 1.1452042, z: 1.0790683}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1428306196
 GameObject:
@@ -4019,7 +4071,7 @@ MonoBehaviour:
   theCountdown: 3
   friesLeft: 5
   xMin: -2.5
-  xMax: 2
+  xMax: 1.5
   yMin: 7
   yMax: 10
 --- !u!4 &1428306198
@@ -4033,7 +4085,7 @@ Transform:
   m_LocalScale: {x: 1.0035813, y: 1.0035813, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1455438116
 GameObject:
@@ -4043,6 +4095,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1455438117}
+  - component: {fileID: 1455438118}
   m_Layer: 0
   m_Name: Info
   m_TagString: Untagged
@@ -4061,9 +4114,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1930371921}
+  - {fileID: 421054146}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455438118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455438116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2b158112c806f42a135f3299423348, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1930371922}
 --- !u!1 &1507411658
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,7 +4223,7 @@ Transform:
   m_LocalScale: {x: 12.401057, y: 1.1452038, z: 1.0790683}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &1570208620
 GameObject:
@@ -4276,7 +4342,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1930371921}
   - component: {fileID: 1930371923}
-  - component: {fileID: 1930371924}
   - component: {fileID: 1930371922}
   m_Layer: 12
   m_Name: DragInfo
@@ -4284,7 +4349,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1930371921
 Transform:
   m_ObjectHideFlags: 0
@@ -4355,18 +4420,6 @@ SpriteRenderer:
   m_Size: {x: 0.87, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
---- !u!114 &1930371924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1930371920}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d2b158112c806f42a135f3299423348, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
 --- !u!1 &2034752240
 GameObject:
   m_ObjectHideFlags: 0
@@ -4490,12 +4543,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2034752240}
   m_LocalRotation: {x: -0.0034993861, y: -0.00002621533, z: -0.00000009173812, w: 0.9999939}
-  m_LocalPosition: {x: 0.07, y: 3.3, z: 0.57}
+  m_LocalPosition: {x: -1.46, y: 2.83, z: 0.57}
   m_LocalScale: {x: 0.7927475, y: 0.7927475, z: 0.7927475}
   m_Children:
   - {fileID: 1072246774}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -0.40100002, y: -0.003, z: 0}
 --- !u!60 &2034752246
 PolygonCollider2D:
@@ -4667,7 +4720,7 @@ Transform:
   m_LocalScale: {x: 8.63126, y: 1.0790683, z: 1.0790683}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2095881895
 MonoBehaviour:
@@ -4686,4 +4739,4 @@ MonoBehaviour:
   nextLevelName: SqueezeTestScene
   waitTime: 2
   fontSize: 45
-  nextPlayerMessage: Success
+  nextPlayerMessage: Done

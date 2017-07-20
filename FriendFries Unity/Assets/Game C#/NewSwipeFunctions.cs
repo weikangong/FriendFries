@@ -5,9 +5,9 @@ using UnityEngine;
 //Swiping any object with tag "potato" will cause object to move in direction.
 //No diagonal directions. will move only if object is touched.
 
-public class SwipeFunctions : MonoBehaviour {
+public class NewSwipeFunctions : MonoBehaviour {
 
-	public GameObject Player;
+	public GameObject[] Player;
 	public GameObject SpawnFry;
 
 	public float maxTime; //max time of which exceeding is not counted as a swipe
@@ -48,14 +48,14 @@ public class SwipeFunctions : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		Player = new GameObject[friesLeft];
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
 		if (Input.touchCount > 0) {
-		
+
 			Touch touch = Input.GetTouch (0);
 
 			if (touch.phase == TouchPhase.Began) {
@@ -79,7 +79,7 @@ public class SwipeFunctions : MonoBehaviour {
 				swipeTime = endTime - startTime;
 
 				if ((swipeTime < maxTime) && (swipeDist > minSwipeDist) && potatoTouched) {
-					swipe ();
+					swipe (friesLeft-1);
 					potatoTouched = false;
 				}
 			}
@@ -102,14 +102,14 @@ public class SwipeFunctions : MonoBehaviour {
 		// ---------------------------------------------------------------------------------------- //
 	}
 
-	void swipe() {
-		
+	void swipe(int i) {
+
 		Vector2 distance = endPos - startPos;
 		swipeVelocity = swipeDist / swipeTime; //used for multiplierForceA
 
-		Player.GetComponent<PlayerSwipe> ().Swipe (distance.x, distance.y, swipeVelocity);
+		Player[i].GetComponent<PlayerSwipe> ().Swipe (distance.x, distance.y, swipeVelocity);
 		// ------------------------------------------------------------------------------------------ //
-/*		if (Mathf.Abs (distance.x) > Mathf.Abs (distance.y)) {
+		/*		if (Mathf.Abs (distance.x) > Mathf.Abs (distance.y)) {
 			Debug.Log ("Horizontal swipe detected");
 
 			if (distance.x > 0) {
@@ -149,6 +149,6 @@ public class SwipeFunctions : MonoBehaviour {
 		// Creates the random object at the random 2D position.
 		Debug.Log ("Spawning Fry: " + friesLeft);
 		GameObject fryClone = (GameObject)Instantiate (SpawnFry, pos, rot);
-		Player = fryClone;
+		Player[friesLeft-1] = fryClone;
 	}
 }

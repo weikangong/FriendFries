@@ -57,6 +57,7 @@
      <Compile Include="Assets\Game C#\InfoAnimation\SwipeInfoAnimate.cs" />
      <Compile Include="Assets\Game C#\MovingLeftRightByTouch.cs" />
      <Compile Include="Assets\Game C#\NewDragFunction.cs" />
+     <Compile Include="Assets\Game C#\NewSwipeFunctions.cs" />
      <Compile Include="Assets\Game C#\PinchFunction.cs" />
      <Compile Include="Assets\Game C#\PlayerDrag.cs" />
      <Compile Include="Assets\Game C#\PlayerSwipe.cs" />

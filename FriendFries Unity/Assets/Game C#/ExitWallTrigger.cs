@@ -13,6 +13,7 @@ public class ExitWallTrigger : MonoBehaviour {
 	public float waitTime;
 	public int fontSize;
 
+	bool showMessage = false;
 	public string nextPlayerMessage;
 
 	void OnTriggerEnter2D(Collider2D other) {
@@ -43,17 +44,25 @@ public class ExitWallTrigger : MonoBehaviour {
 
 		//changes scene
 		if (goNextLvl && allTouchedExitWall) {
-			StartCoroutine ("Wait");
+			StartCoroutine ("WaitToLoad");
 		}
 
 		if (isLastLvl && allTouchedExitWall) {
+			StartCoroutine ("Wait");
 			//show end points 
 		}
 	}
 
-	IEnumerator Wait() {
+	IEnumerator WaitToLoad() {
+		yield return new WaitForSecondsRealtime (2);
+		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
 		Application.LoadLevel (nextLevelName);
+	}
+
+	IEnumerator Wait() {
+		yield return new WaitForSecondsRealtime (3);
+		showMessage = true;
 	}
 
 	void OnGUI() {
@@ -62,7 +71,7 @@ public class ExitWallTrigger : MonoBehaviour {
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		centeredStyle.fontSize = fontSize;
 
-		if (allTouchedExitWall) {
+		if (showMessage) {
 			GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), nextPlayerMessage, centeredStyle);
 		}
 	}

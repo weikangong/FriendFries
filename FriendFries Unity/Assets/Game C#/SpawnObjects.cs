@@ -39,6 +39,7 @@ public class SpawnObjects : MonoBehaviour {
 		}
 		if (theCountdown <= 0 && friesLeft <= 0) {
 			Debug.Log ("No more fries");
+			friesLeft--;
 		}
 	}
 

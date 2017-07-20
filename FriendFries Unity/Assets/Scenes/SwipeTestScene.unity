@@ -201,7 +201,7 @@ Transform:
   m_LocalScale: {x: 10.110483, y: 0.75710756, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -1.945, y: -0.0050000004, z: 90.143005}
 --- !u!1 &220255257
 GameObject:
@@ -241,7 +241,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428307564
 GameObject:
@@ -338,7 +338,7 @@ Transform:
   m_LocalScale: {x: 8.037075, y: 0.9408698, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &428307569
 MonoBehaviour:
@@ -357,7 +357,7 @@ MonoBehaviour:
   nextLevelName: DragTestScene
   waitTime: 2
   fontSize: 45
-  nextPlayerMessage: Success
+  nextPlayerMessage: Done
 --- !u!114 &428307570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +370,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: {fileID: 220255257}
-  points: 30
+  points: 100
+--- !u!1 &676423346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 676423347}
+  - component: {fileID: 676423348}
+  m_Layer: 12
+  m_Name: SwipeInfoText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &676423347
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 676423346}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.72, y: 1.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1408027042}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!132 &676423348
+GUIText:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 676423346}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Text: 'Share the fries
+
+    with your friends!'
+  m_Anchor: 4
+  m_Alignment: 1
+  m_PixelOffset: {x: 0, y: 0}
+  m_LineSpacing: 1
+  m_TabSize: 4
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Material: {fileID: 0}
+  m_FontSize: 35
+  m_FontStyle: 0
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_PixelCorrect: 1
+  m_RichText: 1
 --- !u!1 &740720501
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +518,7 @@ Transform:
   m_LocalScale: {x: 6.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1037615441
 GameObject:
@@ -475,7 +529,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1037615442}
   - component: {fileID: 1037615443}
-  - component: {fileID: 1037615445}
   - component: {fileID: 1037615444}
   m_Layer: 12
   m_Name: SwipInfo
@@ -483,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1037615442
 Transform:
   m_ObjectHideFlags: 0
@@ -554,18 +607,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1037615445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1037615441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 308b06add33557442ae4815293425258, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 1037615444}
 --- !u!1 &1055829933
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +700,7 @@ Transform:
   m_LocalScale: {x: 10.110483, y: 0.75710756, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -1.945, y: -0.0050000004, z: 90.143005}
 --- !u!1 &1066645009
 GameObject:
@@ -801,7 +842,7 @@ Transform:
   m_LocalScale: {x: 0.8475257, y: 1.0967578, z: 0.8692571}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -40.495003}
 --- !u!114 &1066645015
 MonoBehaviour:
@@ -814,10 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a65fed6f7976fd4caf7b2a1e98ab731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upForce: 400
-  downForce: 0
-  leftForce: 0
-  rightForce: 0
+  multiplierForceB: 0.002
 --- !u!1 &1163747280
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,7 +950,7 @@ Transform:
   m_LocalScale: {x: 8.037075, y: 0.9408698, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1163747285
 MonoBehaviour:
@@ -922,9 +960,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1163747280}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da7eb7aa45a83744b6e6ea2402f95ba, type: 3}
+  m_Script: {fileID: 11500000, guid: d38bacd840d974b40a8852fd653ae1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goNextLvl: 1
+  isLastLvl: 0
+  isFirstLvl: 1
+  nextLevelName: DragTestScene
+  waitTime: 2
+  fontSize: 45
+  nextPlayerMessage: Done
 --- !u!1 &1298454979
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +1000,7 @@ MonoBehaviour:
   Player: {fileID: 1066645009}
   SpawnFry: {fileID: 1066645009}
   maxTime: 0.5
-  minSwipeDist: 50
+  minSwipeDist: 10
   waitingForNextSpawn: 3
   theCountdown: 3
   friesLeft: 5
@@ -984,6 +1029,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1408027042}
+  - component: {fileID: 1408027043}
   m_Layer: 12
   m_Name: Info
   m_TagString: Untagged
@@ -1002,9 +1048,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1037615442}
+  - {fileID: 676423347}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1408027043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1408027041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 308b06add33557442ae4815293425258, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1037615444}
 --- !u!1 &1808709734
 GameObject:
   m_ObjectHideFlags: 0

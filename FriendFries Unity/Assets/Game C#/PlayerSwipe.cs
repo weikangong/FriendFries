@@ -8,10 +8,12 @@ using UnityEngine;
 public class PlayerSwipe : MonoBehaviour {
 
 	Rigidbody2D rb;
-	public float upForce;
-	public float downForce;
-	public float leftForce;
-	public float rightForce;
+	//public float upForce;
+	//public float downForce;
+	//public float leftForce;
+	//public float rightForce;
+
+	public float multiplierForceB;
 
 	// Use this for initialization
 	void Start () {
@@ -23,19 +25,24 @@ public class PlayerSwipe : MonoBehaviour {
 		
 	}
 
-	public void SwipeUp(){
-		rb.AddForce (new Vector2 (0, upForce));
+	public void Swipe(float xForce, float yForce, float multiplierForceA) {
+		rb.AddForce (new Vector2 (xForce * multiplierForceA * multiplierForceB, yForce * multiplierForceA * multiplierForceB));
 	}
 
-	public void SwipeDown(){
-		rb.AddForce (new Vector2 (0, -downForce));
+/*	public void SwipeUp(float multiplier){
+		rb.AddForce (new Vector2 (0, upForce*multiplier));
 	}
 
-	public void SwipeLeft(){
-		rb.AddForce (new Vector2 (-leftForce, 0));
+	public void SwipeDown(float multiplier){
+		rb.AddForce (new Vector2 (0, -downForce*multiplier));
 	}
 
-	public void SwipeRight(){
-		rb.AddForce (new Vector2 (rightForce, 0));
+	public void SwipeLeft(float multiplier){
+		rb.AddForce (new Vector2 (-leftForce*multiplier, 0));
 	}
+
+	public void SwipeRight(float multiplier){
+		rb.AddForce (new Vector2 (rightForce*multiplier, 0));
+	}
+*/
 }

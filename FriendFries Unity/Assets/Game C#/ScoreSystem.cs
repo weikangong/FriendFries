@@ -25,10 +25,10 @@ public class ScoreSystem : MonoBehaviour {
 
 		var centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperCenter;
-		centeredStyle.fontSize = 45;
-		string showScore = "Score: \n" + currSceneScore;
+		centeredStyle.fontSize = Screen.width/13;
+		string showScore = "Score: " + currSceneScore;
 
-		GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/5*4, 200, 100), showScore, centeredStyle);
+		GUI.Label (new Rect (Screen.width/17*9, Screen.height/25, 200, 100), showScore, centeredStyle);
 
 	}
 }

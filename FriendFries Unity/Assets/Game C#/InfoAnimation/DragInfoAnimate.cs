@@ -8,7 +8,7 @@ public class DragInfoAnimate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator>();
+		anim = GetComponentInChildren<Animator> ();
 		StartCoroutine(PlayAnimInterval(5, 1F));
 	}
 
