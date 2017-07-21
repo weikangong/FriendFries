@@ -11,9 +11,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 4b199dc7cb5bc584d8c5cc2bbe0f71e7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Menu.unity
     guid: fb203b7c08f3cff4ba59ef0c378df9c7
+  - enabled: 1
+    path: Assets/Scenes/SinglePhoneStartScene.unity
+    guid: c61257715cbb4ca4f99ed7cdab6b9e04
+  - enabled: 1
+    path: Assets/Scenes/SinglePhoneNamesScene.unity
+    guid: d7a8433950bdfe7409ad178fb27ab6e3
   - enabled: 1
     path: Assets/Scenes/SwipeTestScene.unity
     guid: 6350b5334de99604683f92b8a3b9ac66
@@ -21,8 +27,11 @@ EditorBuildSettings:
     path: Assets/Scenes/DragTestScene.unity
     guid: dc343ff2aea3b4c4c8d673f31a72a691
   - enabled: 1
+    path: Assets/Scenes/SqueezeTestScene.unity
+    guid: e6a101eebeed030478e90e64dc6dc544
+  - enabled: 1
     path: Assets/Scenes/CatchTestScene.unity
     guid: 56900a4b8e3f30746ac76ac8ee6bc883
   - enabled: 1
-    path: Assets/Scenes/SqueezeTestScene.unity
-    guid: e6a101eebeed030478e90e64dc6dc544
+    path: Assets/Scenes/EndGameScene.unity
+    guid: 35c51e9b035a03445a5dd199ca78fe5f

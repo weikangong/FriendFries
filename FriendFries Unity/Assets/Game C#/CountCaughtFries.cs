@@ -31,16 +31,5 @@ public class CountCaughtFries : MonoBehaviour {
 
 		Debug.Log ("no. of collisions: " + caughtCount);
 	}
-
-/*	void OnGUI() {
-		//this is mostly only for debug
-		var centeredStyle = GUI.skin.GetStyle("Label");
-		centeredStyle.alignment = TextAnchor.UpperCenter;
-		centeredStyle.fontSize = 45;
-		string message = "caught: " + caughtCount;
-
-		GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), message, centeredStyle);
-
-
-	} */
+		
 }

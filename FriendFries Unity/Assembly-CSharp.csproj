@@ -55,6 +55,7 @@
      <Compile Include="Assets\Game C#\InfoAnimation\DragInfoAnimate.cs" />
      <Compile Include="Assets\Game C#\InfoAnimation\SqueezeInfoAnimate.cs" />
      <Compile Include="Assets\Game C#\InfoAnimation\SwipeInfoAnimate.cs" />
+     <Compile Include="Assets\Game C#\LvlManager.cs" />
      <Compile Include="Assets\Game C#\MovingLeftRightByTouch.cs" />
      <Compile Include="Assets\Game C#\NewDragFunction.cs" />
      <Compile Include="Assets\Game C#\NewSwipeFunctions.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\Game C#\PlayerDrag.cs" />
      <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
      <Compile Include="Assets\Game C#\ScoreSystem.cs" />
+     <Compile Include="Assets\Game C#\ShowNumPeople.cs" />
      <Compile Include="Assets\Game C#\SpawnObjects.cs" />
      <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
      <Compile Include="Assets\Menu Scripts\ActiveStateToggler.cs" />

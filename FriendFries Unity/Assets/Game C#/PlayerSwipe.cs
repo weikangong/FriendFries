@@ -29,20 +29,4 @@ public class PlayerSwipe : MonoBehaviour {
 		rb.AddForce (new Vector2 (xForce * multiplierForceA * multiplierForceB, yForce * multiplierForceA * multiplierForceB));
 	}
 
-/*	public void SwipeUp(float multiplier){
-		rb.AddForce (new Vector2 (0, upForce*multiplier));
-	}
-
-	public void SwipeDown(float multiplier){
-		rb.AddForce (new Vector2 (0, -downForce*multiplier));
-	}
-
-	public void SwipeLeft(float multiplier){
-		rb.AddForce (new Vector2 (-leftForce*multiplier, 0));
-	}
-
-	public void SwipeRight(float multiplier){
-		rb.AddForce (new Vector2 (rightForce*multiplier, 0));
-	}
-*/
 }

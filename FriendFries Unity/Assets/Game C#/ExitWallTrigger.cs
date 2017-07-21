@@ -23,6 +23,10 @@ public class ExitWallTrigger : MonoBehaviour {
 		if (other.gameObject.tag == "Potato") {
 			Destroy (other.gameObject);
 		}
+			
+	}
+
+	public void Update(){
 
 		if (!isFirstLvl) {
 			GameObject frySpawner = GameObject.Find ("frySpawner");
@@ -46,11 +50,6 @@ public class ExitWallTrigger : MonoBehaviour {
 		if (goNextLvl && allTouchedExitWall) {
 			StartCoroutine ("WaitToLoad");
 		}
-
-		if (isLastLvl && allTouchedExitWall) {
-			StartCoroutine ("Wait");
-			//show end points 
-		}
 	}
 
 	IEnumerator WaitToLoad() {
@@ -58,11 +57,6 @@ public class ExitWallTrigger : MonoBehaviour {
 		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
 		Application.LoadLevel (nextLevelName);
-	}
-
-	IEnumerator Wait() {
-		yield return new WaitForSecondsRealtime (3);
-		showMessage = true;
 	}
 
 	void OnGUI() {
