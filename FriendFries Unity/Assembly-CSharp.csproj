@@ -61,6 +61,7 @@
      <Compile Include="Assets\Game C#\NewSwipeFunctions.cs" />
      <Compile Include="Assets\Game C#\PinchFunction.cs" />
      <Compile Include="Assets\Game C#\PlayerDrag.cs" />
+     <Compile Include="Assets\Game C#\PlayerNameList.cs" />
      <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
      <Compile Include="Assets\Game C#\ScoreSystem.cs" />
      <Compile Include="Assets\Game C#\ShowNumPeople.cs" />

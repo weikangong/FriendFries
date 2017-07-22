@@ -9,7 +9,7 @@ public class CatchInfoAnimate : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		anim = GetComponentInChildren<Animator> ();
-		StartCoroutine(PlayAnimInterval(5, 2F));
+		StartCoroutine(PlayAnimInterval(2, 3.5F));
 	}
 
 	// Update is called once per frame

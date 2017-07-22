@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class LvlManager : MonoBehaviour {
 
+	public GameObject Score;
+
 	public GameObject endMenu;
 //	public GameObject pauseMenu;
 
@@ -50,6 +52,7 @@ public class LvlManager : MonoBehaviour {
 
 	public void backtoMenu(){
 		Debug.Log ("--- Back to Menu ---");
+		Score.GetComponent<ScoreSystem> ().resetScore(); //resets score back to zero
 		Application.LoadLevel("SinglePhoneStartScene");
 	}
 

@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SwipeTestScene.unity
     guid: 6350b5334de99604683f92b8a3b9ac66
   - enabled: 1
+    path: Assets/Scenes/PotatoToFryScene.unity
+    guid: 31cb5b028aa340b47af0154fcd3d7ca0
+  - enabled: 1
     path: Assets/Scenes/DragTestScene.unity
     guid: dc343ff2aea3b4c4c8d673f31a72a691
   - enabled: 1

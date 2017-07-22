@@ -22,6 +22,7 @@ public class PinchFunction : MonoBehaviour {
 	public Sprite[] bottle;
 
 	public ParticleSystem ketchupEmit;
+	public ParticleSystem forShowKetchup;
 
 	// Use this for initialization
 	void Start () {
@@ -87,9 +88,11 @@ public class PinchFunction : MonoBehaviour {
 		//particle system, only emits when pinched and has ketchup
 		if (pinched && !noMoreKetchup) {
 			ketchupEmit.Emit (1);
+			forShowKetchup.Emit (1);
 		}
 		if (!pinched || noMoreKetchup) {
 			ketchupEmit.Stop ();
+			forShowKetchup.Stop ();
 		}
 
 		//shows sprite respective to amt of ketchup left

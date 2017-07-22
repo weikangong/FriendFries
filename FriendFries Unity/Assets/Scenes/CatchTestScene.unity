@@ -935,13 +935,13 @@ GameObject:
   m_Component:
   - component: {fileID: 755835431}
   - component: {fileID: 755835432}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: DotLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &755835431
 Transform:
   m_ObjectHideFlags: 0
@@ -984,11 +984,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -388812121
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300042, guid: daf147c08fe29df4cbfa2934372b01e6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.484}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1266,7 +1266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1066514977
 Transform:
   m_ObjectHideFlags: 0
@@ -1469,7 +1469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1518516835
 Transform:
   m_ObjectHideFlags: 0

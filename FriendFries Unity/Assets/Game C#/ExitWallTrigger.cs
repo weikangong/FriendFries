@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//checks for num of fries left in spawner
+//will change to next scene if goNextLvl = true and frieslft = 0
+//destroys fries on contact with objects 
+
 public class ExitWallTrigger : MonoBehaviour {
 
 	public bool goNextLvl;

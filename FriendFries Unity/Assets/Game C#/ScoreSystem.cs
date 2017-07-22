@@ -24,6 +24,11 @@ public class ScoreSystem : MonoBehaviour {
 		Debug.Log ("New Score: " + currScore);
 	}
 
+	public void resetScore(){
+		currScore = 0;
+		Debug.Log ("Score reset to 0");
+	}
+
 	void setScoreText(){
 		scoreText.text = currScore.ToString ();
 	}
