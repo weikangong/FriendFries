@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1280
     height: 627
-  m_MinSize: {x: 911, y: 421}
-  m_MaxSize: {x: 22006, y: 10021}
+  m_MinSize: {x: 917, y: 421}
+  m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 2956
+  controlID: 5460
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 421}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 2957
+  controlID: 5397
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,8 +144,8 @@ MonoBehaviour:
     y: 0
     width: 374
     height: 378
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
@@ -178,14 +178,14 @@ MonoBehaviour:
     width: 372
     height: 357
   m_SceneLighting: 1
-  lastFramingTime: 1754.0454960987654
+  lastFramingTime: 2026.8526143209876
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 382.70776, y: 614.9097, z: 0}
+    m_Target: {x: 400, y: 387.49997, z: 0}
     speed: 2
-    m_Value: {x: 382.70776, y: 614.9097, z: 0}
+    m_Value: {x: 400, y: 387.49997, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -212,9 +212,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 586.4621
+    m_Target: 1125.017
     speed: 2
-    m_Value: 586.4621
+    m_Value: 1125.017
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -303,9 +303,9 @@ MonoBehaviour:
     height: 606
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    m_SelectedIDs: 6a250000
     m_LastClickedID: 0
-    m_ExpandedIDs: baa9ffffbaf0ffffe4fbffff0000000014280000c4280000
+    m_ExpandedIDs: f288ffffd88bffffda8effffb291ffffac9cffffd89dffff42a4ffffb2a6ffff38a7ffff12a8ffff20a8ffff28a8ffff38a8ffff42a8ffff52a8ffff5ca8ffff74a8ffff92acffffecb4ffff7eb5ffffccbaffff4cbcffff48beffff78c1ffff00c8ffff02cbffff9ecbffff4cd6ffff66faffffe4fbffff000000009c290000fe290000923600009c36000054370000b6370000f43f0000fe3f0000484100005e41000056420000b84200001e44000028440000f04f0000fa4f0000b2690000bc690000fa690000086b00001e6b0000506d00005a6d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -346,8 +346,8 @@ MonoBehaviour:
     y: 0
     width: 377
     height: 627
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -390,19 +390,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Game C#
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Game C#
+  - Assets/Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\vik\Desktop\Orbital SaltyPotato\saltypotato\FriendFries
     Unity
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18250000
-    m_LastClickedID: 9496
+    m_SelectedIDs: 5c250000
+    m_LastClickedID: 9564
     m_ExpandedIDs: 00000000f62400001825000012260000a0260000ae260000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -456,24 +456,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 6a250000
+    m_LastClickedInstanceID: 9578
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 0a25000014250000d0260000063400001232000094320000bc2e0000ce2f00000000000004260000363d000058450000025b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: SqueezeTestScene
+      m_OriginalName: SqueezeTestScene
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 9940
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 9}
     m_CreateAssetUtility:

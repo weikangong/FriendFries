@@ -65,6 +65,7 @@
      <Compile Include="Assets\Game C#\PlayerDrag.cs" />
      <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
      <Compile Include="Assets\Game C#\ScoreSystem.cs" />
+     <Compile Include="Assets\Game C#\ShowCurrPlayer.cs" />
      <Compile Include="Assets\Game C#\SpawnObjects.cs" />
      <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
      <Compile Include="Assets\Menu Scripts\ActiveStateToggler.cs" />

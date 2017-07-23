@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game C#\LvlManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game C#\GetPlayerNames.cs">
     <Files>
       <File FileName="Assets\Game C#\ExitWallTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game C#\GetPlayerNames.cs" Line="9" Column="9" />
+      <File FileName="Assets\Game C#\GetPlayerNames.cs" Line="8" Column="35" />
       <File FileName="Assets\Game C#\LvlManager.cs" Line="66" Column="63" />
-      <File FileName="Assets\Game C#\ScoreSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Game C#\ScoreSystem.cs" Line="15" Column="3" />
+      <File FileName="Assets\Game C#\ShowCurrPlayer.cs" Line="12" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

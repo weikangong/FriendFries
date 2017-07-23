@@ -7,6 +7,7 @@ public class GetPlayerNames : MonoBehaviour {
 
 	public InputField[] getPlayerName;
 	static string[] playerNames;
+	static string[] playingPlayerNames;
 
 	public GameObject PlayerNumbers;
 	int numPlayingPlayers;
@@ -23,6 +24,8 @@ public class GetPlayerNames : MonoBehaviour {
 
 		numPlayingPlayers = PlayerNumbers.GetComponent<GetNumPlayers> ().returnNumPlayers ();
 		playerNames = new string[10];
+		playingPlayerNames = new string[numPlayingPlayers];
+
 		//Adds a listener that invokes the "LockInput" method when the player finishes editing the main input field.
 		//Passes the main input field into the method when "LockInput" is invoked
 
@@ -91,6 +94,9 @@ public class GetPlayerNames : MonoBehaviour {
 		}
 
 		if (!missingName && !sameName) {
+			for (int i = 0; i < numPlayingPlayers; i++) {
+				playingPlayerNames [i] = playerNames [i];
+			}
 			gotProblem = false;
 		}
 	}
@@ -124,8 +130,8 @@ public class GetPlayerNames : MonoBehaviour {
 		return gotProblem;
 	}
 
-	public string[] returnPlayerNames(){
-		return playerNames;
+	public string[] returnPlayingPlayerNames(){
+		return playingPlayerNames;
 	}
 
 }
