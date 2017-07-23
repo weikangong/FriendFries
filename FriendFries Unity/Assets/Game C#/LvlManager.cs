@@ -10,10 +10,12 @@ public class LvlManager : MonoBehaviour {
 
 	public GameObject endMenu;
 //	public GameObject pauseMenu;
+	public GameObject popUp;
 
 	// Use this for initialization
 	void Start () {
-		
+
+		popUp.SetActive (false);
 		//pauseMenu.SetActive (false);
 		//endMenu.SetActive (false);
 
@@ -26,13 +28,26 @@ public class LvlManager : MonoBehaviour {
 	}
 
 	// ----------------------------------------------------------- //
-	//Menu UI
+	//UI
 /*	public void pauseGame(){
 		Debug.Log ("--- Pausing Game ---");
 		pauseMenu.SetActive (true);
 
 	}
 */
+
+	public void showPopUp(){
+		Debug.Log ("---Opening PopUp---");
+		popUp.SetActive (true);
+
+	}
+
+	public void closePopUp(){
+		Debug.Log ("---Closing PopUp---");
+		popUp.SetActive (false);
+
+	}
+
 	public void gameOver(){
 		Debug.Log ("--- Game Finished ---");
 		endMenu.SetActive (true);
@@ -48,11 +63,12 @@ public class LvlManager : MonoBehaviour {
 
 	public void startNewGame(){
 		
-		if (!Checking.GetComponent<GetPlayerNames> ().checkIfMissingName ()) {
+		if (!Checking.GetComponent<GetPlayerNames> ().checkIfProblem ()) {
 			Debug.Log ("--- Starting New Game ---");
 			Application.LoadLevel ("SwipeTestScene");
 		} else {
 			Debug.Log ("--- Failed To Start New Game ---");
+			showPopUp ();
 		}
 	}
 

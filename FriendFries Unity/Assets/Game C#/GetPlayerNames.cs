@@ -6,15 +6,21 @@ using UnityEngine.UI;
 public class GetPlayerNames : MonoBehaviour {
 
 	public InputField[] getPlayerName;
-	string[] playerNames;
+	static string[] playerNames;
 
 	public GameObject PlayerNumbers;
 	int numPlayingPlayers;
 
-	public bool missingName;
+	bool missingName;
+	bool sameName;
+	public bool gotProblem;
 
 	public void Start()
 	{
+		missingName = true;
+		sameName = true;
+		gotProblem = true; //assume problem unless otherwise
+
 		numPlayingPlayers = PlayerNumbers.GetComponent<GetNumPlayers> ().returnNumPlayers ();
 		playerNames = new string[10];
 		//Adds a listener that invokes the "LockInput" method when the player finishes editing the main input field.
@@ -80,8 +86,16 @@ public class GetPlayerNames : MonoBehaviour {
 
 	void Update() {
 		missingName = checkPlayers ();
+		if (!missingName) {
+			sameName = checkSameName ();
+		}
+
+		if (!missingName && !sameName) {
+			gotProblem = false;
+		}
 	}
 
+	//checks if the number of name inputs = the number of players
 	bool checkPlayers(){
 		for (int i = 0; i < numPlayingPlayers; i++) {
 			if (playerNames [i] == null) {
@@ -92,8 +106,22 @@ public class GetPlayerNames : MonoBehaviour {
 		return false;
 	}
 
-	public bool checkIfMissingName(){
-		return missingName;
+	//checks if any of the players have the same name
+	bool checkSameName(){
+		for (int x = 0; x < numPlayingPlayers; x++) { //loop through players
+			for (int y = x + 1; y < numPlayingPlayers; y++) { //loop through other players
+				if (playerNames [x] == playerNames [y]) {
+					return true;
+				}
+
+			}
+		}
+
+		return false;
+	}
+
+	public bool checkIfProblem(){
+		return gotProblem;
 	}
 
 	public string[] returnPlayerNames(){
