@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class LvlManager : MonoBehaviour {
 
 	public GameObject Score;
-	public GameObject Checking;
 
 	public GameObject endMenu;
 //	public GameObject pauseMenu;
@@ -63,13 +62,19 @@ public class LvlManager : MonoBehaviour {
 
 	public void startNewGame(){
 		
-		if (!Checking.GetComponent<GetPlayerNames> ().checkIfProblem ()) {
+		if (!GetPlayerNames2.gotProblem) {
 			Debug.Log ("--- Starting New Game ---");
 			Application.LoadLevel ("SwipeTestScene");
 		} else {
 			Debug.Log ("--- Failed To Start New Game ---");
 			showPopUp ();
 		}
+	}
+
+	//overide and start game button
+	public void startGameRegardless(){
+		Debug.Log ("--- Starting New Game ---");
+		Application.LoadLevel ("SwipeTestScene");
 	}
 
 	public void backtoMenu(){

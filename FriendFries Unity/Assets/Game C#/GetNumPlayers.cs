@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GetNumPlayers : MonoBehaviour {
 
 	public Dropdown getNumPlayers;
-	static int numPlayers;
+	public static int numPlayers;
 
 	// Use this for initialization
 	void Start () {

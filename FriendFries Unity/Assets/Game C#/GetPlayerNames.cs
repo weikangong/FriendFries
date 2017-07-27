@@ -5,70 +5,83 @@ using UnityEngine.UI;
 
 public class GetPlayerNames : MonoBehaviour {
 
-	public InputField[] getPlayerName;
-	static string[] playerNames;
-	static string[] playingPlayerNames;
+	public Text currPlayerText;
+	public int currPlayer;
+	public bool showText;
 
-	public GameObject PlayerNumbers;
+	public bool getNames;
+	public InputField[] getPlayerName;
+	string[] playerNames;
+	public static string[] playingPlayerNames;
+
 	int numPlayingPlayers;
 
 	bool missingName;
 	bool sameName;
-	public bool gotProblem;
+	public static bool gotProblem;
 
 	public void Start()
 	{
+
 		missingName = true;
 		sameName = true;
 		gotProblem = true; //assume problem unless otherwise
 
-		numPlayingPlayers = PlayerNumbers.GetComponent<GetNumPlayers> ().returnNumPlayers ();
+		numPlayingPlayers = GetNumPlayers.numPlayers;
 		playerNames = new string[10];
 		playingPlayerNames = new string[numPlayingPlayers];
 
+		if (showText) {
+			currPlayer = pickRandomPlayer () + 1;
+			Debug.Log ("Current player is: " + currPlayer.ToString());
+			currPlayerText.text = "Player " + currPlayer.ToString ();
+		}
+
+
 		//Adds a listener that invokes the "LockInput" method when the player finishes editing the main input field.
 		//Passes the main input field into the method when "LockInput" is invoked
+		if (getNames) {
+			getPlayerName [0].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [0], 0);
+			});
 
-		getPlayerName [0].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [0], 0);
-		});
-
-		getPlayerName [1].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [1], 1);
-		});
+			getPlayerName [1].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [1], 1);
+			});
 			
-		getPlayerName [2].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [2], 2);
-		});
+			getPlayerName [2].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [2], 2);
+			});
 
-		getPlayerName [3].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [3], 3);
-		});
+			getPlayerName [3].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [3], 3);
+			});
 
-		getPlayerName [4].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [4], 4);
-		});
+			getPlayerName [4].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [4], 4);
+			});
 
-		getPlayerName [5].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [5], 5);
-		});
+			getPlayerName [5].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [5], 5);
+			});
 
-		getPlayerName [6].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [6], 6);
-		});
+			getPlayerName [6].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [6], 6);
+			});
 
-		getPlayerName [7].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [7], 7);
-		});
+			getPlayerName [7].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [7], 7);
+			});
 
-		getPlayerName [8].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [8], 8);
-		});
+			getPlayerName [8].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [8], 8);
+			});
 
-		getPlayerName [9].onEndEdit.AddListener (delegate {
-			LockInput (getPlayerName [9], 9);
-		});
-
+			getPlayerName [9].onEndEdit.AddListener (delegate {
+				LockInput (getPlayerName [9], 9);
+			});
+		}
+			
 	}
 
 	// Checks if there is anything entered into the input field.
@@ -79,6 +92,11 @@ public class GetPlayerNames : MonoBehaviour {
 			Debug.Log(input.text + " has been entered");
 			playerNames [arrayPlayerNo] = input.text; //assigns inputfield names to playerNames string array
 			Debug.Log ("Player " + actualPlayerNo + "'s name is: " + playerNames [arrayPlayerNo]);
+
+			if (arrayPlayerNo < numPlayingPlayers) {
+				playingPlayerNames [arrayPlayerNo] = playerNames[arrayPlayerNo];
+				Debug.Log ("Playing Player " + actualPlayerNo + " name is set to: " + playingPlayerNames[arrayPlayerNo]);
+			}
 
 		} else if (input.text.Length == 0) {
 			Debug.Log("Input Empty");
@@ -94,9 +112,6 @@ public class GetPlayerNames : MonoBehaviour {
 		}
 
 		if (!missingName && !sameName) {
-			for (int i = 0; i < numPlayingPlayers; i++) {
-				playingPlayerNames [i] = playerNames [i];
-			}
 			gotProblem = false;
 		}
 	}
@@ -130,8 +145,10 @@ public class GetPlayerNames : MonoBehaviour {
 		return gotProblem;
 	}
 
-	public string[] returnPlayingPlayerNames(){
-		return playingPlayerNames;
+	int pickRandomPlayer(){
+		int randomNumPicked = Random.Range (0, numPlayingPlayers);
+		Debug.Log ("Random Picked player in arrayPos: " + randomNumPicked);
+		return randomNumPicked;
 	}
 
 }
