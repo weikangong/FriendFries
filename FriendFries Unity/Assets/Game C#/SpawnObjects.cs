@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script spawns the assigned GameObject
+//at random positions within Xmin & Xmax and Ymin & Ymax
+//and spawns until friesLeft = 0
+//spawing them one by one with countdown sec between each spawn
+
 public class SpawnObjects : MonoBehaviour {
 
 	//(Array of) objects to spawn
@@ -23,11 +28,6 @@ public class SpawnObjects : MonoBehaviour {
 	public float yMin;
 	public float yMax;
 
-
-	void Start() {
-		
-	}
-
 	public void Update() {
 		// timer to spawn the next goodie Object
 		theCountdown -= Time.deltaTime;
@@ -44,6 +44,7 @@ public class SpawnObjects : MonoBehaviour {
 	}
 
 
+	//spawns the fries
 	public void spawnFries() {
 		// Defines the min and max ranges for x and y
 		Vector2 pos = new Vector2 (Random.Range (xMin, xMax), Random.Range (yMin, yMax));

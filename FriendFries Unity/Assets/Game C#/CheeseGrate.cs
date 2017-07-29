@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//to be attached to grater gameobject
+//determines when cheese block emits cheesebits
+//only emits when entering any of the trigger collision edges
+
 public class CheeseGrate : MonoBehaviour {
 
 	public bool emitCheese = false;

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//This script can get player names from the player input boxes and saves those names to a PlayerClass array.
+//requires script "GetNumPlayers" to work
+//Script also randomly picks a single unpicked player to display every scene.
+
 public class GetPlayerNames2 : MonoBehaviour {
 
 	public Text currPlayerText;
@@ -28,6 +32,7 @@ public class GetPlayerNames2 : MonoBehaviour {
 
 		showText = true;
 		numPlayingPlayers = GetNumPlayers.numPlayers;
+
 		//Adds a listener that invokes the "LockInput" method when the player finishes editing the main input field.
 		//Passes the main input field into the method when "LockInput" is invoked
 		if (getNames) {
@@ -95,7 +100,9 @@ public class GetPlayerNames2 : MonoBehaviour {
 		}
 	}
 
+	//Update checks for name problems and picks a random player each scene
 	void Update() {
+		
 		if (!showText) {
 			missingName = checkPlayers ();
 			if (!missingName) {
@@ -112,18 +119,23 @@ public class GetPlayerNames2 : MonoBehaviour {
 			currNum = pickRandomNumber ();
 			Debug.Log ("Number picked " + currNum);
 
+			//repicks player if player was choosen before
 			while (players [currNum].getPicked()) {
 				currNum = pickRandomNumber ();
 				Debug.Log ("Number picked " + currNum);
 
 			}
 
+			//displays picked player
 			Debug.Log ("Current player is: " + players[currNum].getName());
 			currPlayerText.text = "Player " + players[currNum].getName();
 			players [currNum].isPicked ();
 
 		}
 	}
+
+	//------------------------------------------------------------------------------//
+	//Functions used to check for problems with names
 
 	//checks if the number of name inputs = the number of players
 	bool checkPlayers(){
@@ -159,6 +171,9 @@ public class GetPlayerNames2 : MonoBehaviour {
 		return gotProblem;
 	}
 
+	//-------------------------------------------------------------------------------------//
+	//Functions used for picking a player each scene
+
 	public int pickRandomNumber(){
 		int randomNumPicked = Random.Range (0, numPlayingPlayers);
 		Debug.Log ("Random Picked Number: " + randomNumPicked);
@@ -172,6 +187,8 @@ public class GetPlayerNames2 : MonoBehaviour {
 	}
 
 }
+
+//----------------------------------------------------------------------------------------//
 
 public class PlayerClass {
 

@@ -20,6 +20,7 @@ public class ExitWallTrigger : MonoBehaviour {
 	bool showMessage = false;
 	public string nextPlayerMessage;
 
+	//destroys objects tagged with "potato" when they enter the trigger area
 	void OnTriggerEnter2D(Collider2D other) {
 		
 		Debug.Log ("Collision with exit wall detected: " + other.gameObject.name);
@@ -56,12 +57,16 @@ public class ExitWallTrigger : MonoBehaviour {
 		}
 	}
 
+	//loads next scene after a while
 	IEnumerator WaitToLoad() {
 		yield return new WaitForSecondsRealtime (2);
 		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
 		Application.LoadLevel (nextLevelName);
 	}
+
+	//--------------------------------------------------------------------------------------------//
+	//Below is mostly used fro debugging, can just remove or comment out
 
 	void OnGUI() {
 

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//add to Fries gameobjects
+//counts the number of particles collided with fry
+//adds points accordingly per particle collided
+
 public class CollisionCounter : MonoBehaviour {
 
 	public GameObject Score;
@@ -10,10 +14,6 @@ public class CollisionCounter : MonoBehaviour {
 	bool enoughFlavour = false;
 	public float minFlavour;
 	int colCount = 0;
-	// Use this for initialization
-	void Start () {
-		
-	}
 
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +24,7 @@ public class CollisionCounter : MonoBehaviour {
 		}
 	}
 
+	//counts the number of collisions of particles on gameobject
 	void OnParticleCollision(GameObject other) {
 		Debug.Log ("Collision Detected");
 		colCount ++;

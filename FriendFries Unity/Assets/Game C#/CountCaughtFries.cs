@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//add to fry container
+//add points for every fry caught in trigger collider
+
 public class CountCaughtFries : MonoBehaviour {
 
 	public GameObject Score;
@@ -9,16 +12,7 @@ public class CountCaughtFries : MonoBehaviour {
 
 	int caughtCount = 0;
 
-	// Use this for initialization
-	void Start () {
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-
-	}
-
+	//add points for every fry caught in trigger collider
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("Collision Detected");
 
