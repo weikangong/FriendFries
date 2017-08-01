@@ -52,7 +52,6 @@
      <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
      <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
      <Compile Include="Assets\Game C#\GetNumPlayers.cs" />
-     <Compile Include="Assets\Game C#\GetPlayerNames.cs" />
      <Compile Include="Assets\Game C#\GetPlayerNames2.cs" />
      <Compile Include="Assets\Game C#\InfoAnimation\CatchInfoAnimate.cs" />
      <Compile Include="Assets\Game C#\InfoAnimation\DragInfoAnimate.cs" />
@@ -68,6 +67,7 @@
      <Compile Include="Assets\Game C#\ScoreSystem.cs" />
      <Compile Include="Assets\Game C#\SpawnObjects.cs" />
      <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
+     <Compile Include="Assets\Game C#\TiltMovement.cs" />
      <Compile Include="Assets\Menu Scripts\ActiveStateToggler.cs" />
      <Compile Include="Assets\Menu Scripts\ApplicationManager.cs" />
      <Compile Include="Assets\Menu Scripts\ChangeColor.cs" />

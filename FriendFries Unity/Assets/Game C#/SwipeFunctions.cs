@@ -96,7 +96,7 @@ public class SwipeFunctions : MonoBehaviour {
 			friesLeft--;
 		}
 		if (theCountdown <= 0 && friesLeft <= 0) {
-			Debug.Log ("No more fries");
+			//Debug.Log ("No more fries");
 		}
 
 		// ---------------------------------------------------------------------------------------- //

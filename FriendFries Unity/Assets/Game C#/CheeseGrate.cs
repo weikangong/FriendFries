@@ -11,7 +11,7 @@ public class CheeseGrate : MonoBehaviour {
 	public bool emitCheese = false;
 
 	void OnTriggerEnter2D (Collider2D other) {
-		Debug.Log ("Collision Detected");
+		//Debug.Log ("Collision Detected");
 
 		if (other.gameObject.tag == "Cheese") {
 			Debug.Log ("Cheese has entered Grater");

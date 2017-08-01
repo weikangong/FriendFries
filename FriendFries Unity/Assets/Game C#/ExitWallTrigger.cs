@@ -20,6 +20,8 @@ public class ExitWallTrigger : MonoBehaviour {
 	bool showMessage = false;
 	public string nextPlayerMessage;
 
+	public GameObject nextLvl;
+
 	//destroys objects tagged with "potato" when they enter the trigger area
 	void OnTriggerEnter2D(Collider2D other) {
 		
@@ -62,7 +64,12 @@ public class ExitWallTrigger : MonoBehaviour {
 		yield return new WaitForSecondsRealtime (2);
 		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
-		Application.LoadLevel (nextLevelName);
+		//Application.LoadLevel (nextLevelName);
+		if (isLastLvl) {
+			nextLvl.GetComponent<LvlManager> ().endGame ();
+		} else {
+			nextLvl.GetComponent<LvlManager> ().goNextLvl ();
+		}
 	}
 
 	//--------------------------------------------------------------------------------------------//

@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: 5}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &229803758
 GameObject:
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &596944461
 GameObject:
@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &615404529
 GameObject:
@@ -7856,7 +7856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: 5}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1751772088
 GameObject:
@@ -7938,6 +7938,7 @@ GameObject:
   - component: {fileID: 1783798853}
   - component: {fileID: 1783798852}
   - component: {fileID: 1783798849}
+  - component: {fileID: 1783798850}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7961,6 +7962,22 @@ MonoBehaviour:
   getNames: 0
   getPlayerName: []
   currNum: 0
+--- !u!114 &1783798850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783798848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd5d4b30f107754fa32049a8f5ec634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 0}
+  endMenu: {fileID: 0}
+  popUp: {fileID: 0}
+  minLvl: 4
+  maxLvl: 5
 --- !u!114 &1783798852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8414,3 +8431,4 @@ MonoBehaviour:
   waitTime: 2
   fontSize: 45
   nextPlayerMessage: Done
+  nextLvl: {fileID: 1783798848}

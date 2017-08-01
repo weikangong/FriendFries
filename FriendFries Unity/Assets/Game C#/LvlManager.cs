@@ -13,8 +13,14 @@ public class LvlManager : MonoBehaviour {
 //	public GameObject pauseMenu;
 	public GameObject popUp;
 
+	public static int numPlayingPlayers;
+	public static int lvlCount = 0;
+	public string[] repeatableLvls = { "DragTestScene", "SqueezeTestScene" };
+
 	// Use this for initialization
 	void Start () {
+
+		numPlayingPlayers = GetNumPlayers.numPlayers;
 
 		popUp.SetActive (false);
 		//pauseMenu.SetActive (false);
@@ -63,8 +69,13 @@ public class LvlManager : MonoBehaviour {
 
 	//goes to scene for players to nter names
 	public void goToEnterNames(){
-		Debug.Log ("--- Going To Enter Names ---");
-		Application.LoadLevel("SinglePhoneNamesScene");
+		if (!GetNumPlayers.gotProblem) {
+			Debug.Log ("--- Going To Enter Names ---");
+			Application.LoadLevel ("SinglePhoneNamesScene");
+		} else {
+			showPopUp ();
+		}
+
 	}
 
 	//starts new game if no problems with names
@@ -72,6 +83,7 @@ public class LvlManager : MonoBehaviour {
 		
 		if (!GetPlayerNames2.gotProblem) {
 			Debug.Log ("--- Starting New Game ---");
+			lvlCount++;
 			Application.LoadLevel ("SwipeTestScene");
 		} else {
 			Debug.Log ("--- Failed To Start New Game ---");
@@ -85,10 +97,48 @@ public class LvlManager : MonoBehaviour {
 		Application.LoadLevel ("SwipeTestScene");
 	}
 
+	//picks a level that can be repeatable
+	public string pickLvl(){
+		string picked = repeatableLvls [(int) Random.Range (0, repeatableLvls.Length)];
+		Debug.Log ("Picked Lvl: " + picked);
+		return picked;
+	}
+
+	//goes to level picked
+	public void goNextLvl(){
+		string picked = pickLvl ();
+
+		if (numPlayingPlayers == 1) {
+			endGame ();
+		}
+
+		if (lvlCount <= numPlayingPlayers) {
+			lvlCount++;
+			Debug.Log ("Lvl Count: " + lvlCount);
+			Application.LoadLevel (picked);
+		} 
+
+		if(lvlCount > numPlayingPlayers) {
+			lvlCount++;
+			goLastLvl ();
+		}
+			
+	}
+
+	public void goLastLvl(){
+		Debug.Log ("--- Going Last Level ---");
+		Application.LoadLevel ("CatchTestScene");
+	}
+
 	//sends users back to the main menu scene
 	public void backtoMenu(){
 		Debug.Log ("--- Back to Menu ---");
 		Application.LoadLevel("SinglePhoneStartScene");
+	}
+
+	public void endGame(){
+		Debug.Log ("--- Going To End Menu ---");
+		Application.LoadLevel("EndGameScene");
 	}
 
 	public void resetScore(){

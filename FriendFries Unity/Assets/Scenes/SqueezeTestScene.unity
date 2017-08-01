@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &88719993
 GameObject:
@@ -6734,6 +6734,7 @@ MonoBehaviour:
   waitTime: 2
   fontSize: 45
   nextPlayerMessage: Done
+  nextLvl: {fileID: 875104745}
 --- !u!61 &309105388
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7131,8 +7132,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 3, y: 3}
-  m_UseGraphicAlpha: 1
+  m_EffectDistance: {x: 2, y: 2}
+  m_UseGraphicAlpha: 0
 --- !u!1 &812453373
 GameObject:
   m_ObjectHideFlags: 0
@@ -7318,6 +7319,7 @@ GameObject:
   - component: {fileID: 875104750}
   - component: {fileID: 875104749}
   - component: {fileID: 875104746}
+  - component: {fileID: 875104747}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -7340,7 +7342,23 @@ MonoBehaviour:
   showText: 1
   getNames: 0
   getPlayerName: []
-  currPlayer: {fileID: 0}
+  currNum: 0
+--- !u!114 &875104747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875104745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd5d4b30f107754fa32049a8f5ec634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Score: {fileID: 0}
+  endMenu: {fileID: 0}
+  popUp: {fileID: 0}
+  minLvl: 4
+  maxLvl: 5
 --- !u!114 &875104749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7538,7 +7556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: 5}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1207437128
 GameObject:
@@ -7627,7 +7645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
-  m_EffectDistance: {x: 5, y: 5}
+  m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1337291184
 GameObject:
