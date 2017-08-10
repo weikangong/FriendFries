@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//This script get the number of players playing from the dropdown and save that number for other scripts use
-
+// This script get the number of players playing from the 
+// dropdown and save that number for other scripts to use
 public class GetNumPlayers : MonoBehaviour {
-
 	public Dropdown getNumPlayers;
-	public static int numPlayers;
+	public static int numPlayers = 0;
 	public static bool gotProblem;
-
-	// Use this for initialization
+    
 	void Start () {
 		gotProblem = true;
 		getNumPlayers.onValueChanged.AddListener (delegate {
@@ -28,7 +26,7 @@ public class GetNumPlayers : MonoBehaviour {
 		}
 	}
 
-	//dropdown starts from index 0, so numPlayers is +1
+	// Dropdown starts from index 0, so numPlayers is +1
 	void LockInput(Dropdown numberOfPlayers) {
 		numPlayers = numberOfPlayers.value + 1;
 		Debug.Log ("Number of players playing: " + numPlayers);

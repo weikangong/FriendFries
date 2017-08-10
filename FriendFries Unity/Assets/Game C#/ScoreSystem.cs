@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//This script deals with all the functions regarding the score
-//also displays score UI
+// This script defines all the score 
+// functions and displays score UI
 
 public class ScoreSystem : MonoBehaviour {
-
 	public Text scoreText;
-
 	public static int currScore = 0;
 	
 	// Update is called once per frame
@@ -17,19 +15,19 @@ public class ScoreSystem : MonoBehaviour {
 		setScoreText ();
 	}
 
-	//addes points to the total score
+	// Add points to the total score
 	public void updateScore (int addScore) {
 		currScore = currScore + addScore;
-		Debug.Log ("New Score: " + currScore);
+		Debug.Log("New Score: " + currScore);
 	}
 
-	//reset score to 0
-	public void resetScore(){
-		currScore = 0;
-		Debug.Log ("Score reset to 0");
+	// Resets score to 0
+	public void resetScore() {
+        currScore = 0;
+		Debug.Log("Score resets to 0");
 	}
 		
-	void setScoreText(){
-		scoreText.text = currScore.ToString ();
+	void setScoreText() {
+		scoreText.text = currScore.ToString();
 	}
 }

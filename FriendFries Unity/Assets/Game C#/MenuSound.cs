@@ -6,11 +6,13 @@ public class MenuSound : MonoBehaviour {
     public AudioClip sound;
     private AudioSource source { get { return GetComponent<AudioSource>(); } }
 
-    // Use this for initialization
-    void Start () {
+    void Start() {
         gameObject.AddComponent<AudioSource>();
         source.clip = sound;
         source.Play();
-        InGameSound.Instance.gameObject.GetComponent<AudioSource>().Pause();
+
+        if (InGameSound.getInstance != null) {
+            InGameSound.instance = null;
+        }
     }
 }

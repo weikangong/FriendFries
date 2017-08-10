@@ -2,37 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// This script plays the global in game sound and gets
+// destoryed by MenuSound script when that is activated
 public class InGameSound : MonoBehaviour {
+    public static InGameSound instance = null;
+    public static InGameSound getInstance { get { return instance; } }
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    //Play Global
-    private static InGameSound instance = null;
-    public static InGameSound Instance { get { return instance; } }
-
-    void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(this.gameObject);
+    void Awake() {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);   
             return;
         }
-        else
-        {
-            instance = this;
-        }
+        else { instance = this; }
 
         DontDestroyOnLoad(this.gameObject);
     }
-    //Play Gobal End
 
-    // Update is called once per frame
-    void Update()
-    {
-
+    void Update() {
+        if (instance == null) {
+            Destroy(this.gameObject);
+            Debug.Log("In game sound cut");
+            return;
+        }
     }
 }

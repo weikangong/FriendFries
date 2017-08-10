@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//This script is in charge of changing between non-game scenes to game scenes
-
+// This script is in charge of changing between non-game scenes to game scenes
 public class LvlManager : MonoBehaviour {
 
 	public GameObject Score;
-
 	public GameObject endMenu;
 //	public GameObject pauseMenu;
 	public GameObject popUp;
@@ -17,12 +15,9 @@ public class LvlManager : MonoBehaviour {
 	public static int lvlCount = 0;
 	public string[] repeatableLvls = { "DragTestScene", "SqueezeTestScene" };
 
-	// Use this for initialization
 	void Start () {
-
 		numPlayingPlayers = GetNumPlayers.numPlayers;
-
-		popUp.SetActive (false);
+        if (popUp != null) { popUp.SetActive(false); }
 		//pauseMenu.SetActive (false);
 		//endMenu.SetActive (false);
 
@@ -36,22 +31,21 @@ public class LvlManager : MonoBehaviour {
 
 	// ----------------------------------------------------------- //
 	//UI functions
-
-/*	public void pauseGame(){
+/*
+	public void pauseGame(){
 		Debug.Log ("--- Pausing Game ---");
 		pauseMenu.SetActive (true);
 
 	}
 */
-
-	//displays assigned pop up box
-	public void showPopUp(){
+	// Displays assigned popup box
+	public void showPopUp() {
 		Debug.Log ("---Opening PopUp---");
 		popUp.SetActive (true);
 
 	}
 
-	//closes assigned pop up box
+	// Closes assigned pop up box
 	public void closePopUp(){
 		Debug.Log ("---Closing PopUp---");
 		popUp.SetActive (false);
@@ -64,21 +58,19 @@ public class LvlManager : MonoBehaviour {
 
 	}
 
-	// ----------------------------------------------------------- //
-	//Button functions
-
-	//goes to scene for players to nter names
-	public void goToEnterNames(){
+	// Button functions
+	// Goes to scene for players to enter names
+	public void goToEnterNames() {
 		if (!GetNumPlayers.gotProblem) {
 			Debug.Log ("--- Going To Enter Names ---");
-			Application.LoadLevel ("SinglePhoneNamesScene");
+			Application.LoadLevel ("EnterNameScene");
 		} else {
 			showPopUp ();
 		}
 
 	}
 
-	//starts new game if no problems with names
+	// Starts new game if no problems with names
 	public void startNewGame(){
 		
 		if (!GetPlayerNames2.gotProblem) {
@@ -91,20 +83,20 @@ public class LvlManager : MonoBehaviour {
 		}
 	}
 
-	//overide and start game button
+	// Overides and start game
 	public void startGameRegardless(){
 		Debug.Log ("--- Starting New Game ---");
 		Application.LoadLevel ("SwipeTestScene");
 	}
 
-	//picks a level that can be repeatable
+	// Picks a level that can be repeatable
 	public string pickLvl(){
 		string picked = repeatableLvls [(int) Random.Range (0, repeatableLvls.Length)];
 		Debug.Log ("Picked Lvl: " + picked);
 		return picked;
 	}
 
-	//goes to level picked
+	// Goes to level picked
 	public void goNextLvl(){
 		string picked = pickLvl ();
 
@@ -125,27 +117,32 @@ public class LvlManager : MonoBehaviour {
 			
 	}
 
-	public void goLastLvl(){
+	public void goLastLvl() {
 		Debug.Log ("--- Going Last Level ---");
-		Application.LoadLevel ("CatchTestScene");
+		Application.LoadLevel("CatchTestScene");
 	}
 
-	//sends users back to the main menu scene
-	public void backtoMenu(){
+	// Sends users back to the main menu scene
+	public void backtoMenu() {
 		Debug.Log ("--- Back to Menu ---");
-		Application.LoadLevel("SinglePhoneStartScene");
+		Application.LoadLevel("MenuScene");
 	}
 
-	public void endGame(){
+	public void endGame() {
 		Debug.Log ("--- Going To End Menu ---");
 		Application.LoadLevel("EndGameScene");
 	}
 
-	public void resetScore(){
-		Score.GetComponent<ScoreSystem> ().resetScore(); //resets score back to zero
-	}
+    // Resets score and number of players to 0
+	public void reset() {
+        if (Score != null) {
+            Score.GetComponent<ScoreSystem>().resetScore(); // Resets score back to zero
+        }
+        GetNumPlayers.numPlayers = 0;
+        Debug.Log("Number of players reset to 0");
+    }
 
-	//exits the application
+	// Exits the application
 	public void quitGame(){
 		Debug.Log ("--- Quiting Game ---");
 		Application.Quit ();
