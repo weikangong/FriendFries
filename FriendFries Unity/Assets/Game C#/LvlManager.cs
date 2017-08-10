@@ -8,51 +8,44 @@ public class LvlManager : MonoBehaviour {
 
 	public GameObject Score;
 	public GameObject endMenu;
-//	public GameObject pauseMenu;
 	public GameObject popUp;
+    public bool pause;
 
 	public static int numPlayingPlayers;
 	public static int lvlCount = 0;
 	public string[] repeatableLvls = { "DragTestScene", "SqueezeTestScene" };
 
 	void Start () {
+        pause = false;
 		numPlayingPlayers = GetNumPlayers.numPlayers;
         if (popUp != null) { popUp.SetActive(false); }
-		//pauseMenu.SetActive (false);
-		//endMenu.SetActive (false);
-
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
 	// ----------------------------------------------------------- //
 	//UI functions
-/*
-	public void pauseGame(){
-		Debug.Log ("--- Pausing Game ---");
-		pauseMenu.SetActive (true);
-
+	public void pauseAndResumeGame() {
+		Debug.Log ("--- Pausing/Resuming Game ---");
+        pause = !pause;
+        if (!pause) Time.timeScale = 1;
+        else Time.timeScale = 0;
+		
 	}
-*/
+
 	// Displays assigned popup box
 	public void showPopUp() {
 		Debug.Log ("---Opening PopUp---");
-		popUp.SetActive (true);
+		popUp.SetActive(true);
 
 	}
 
 	// Closes assigned pop up box
-	public void closePopUp(){
+	public void closePopUp() {
 		Debug.Log ("---Closing PopUp---");
-		popUp.SetActive (false);
+		popUp.SetActive(false);
 
 	}
 
-	public void gameOver(){
+	public void gameOver() {
 		Debug.Log ("--- Game Finished ---");
 		endMenu.SetActive (true);
 
@@ -65,14 +58,13 @@ public class LvlManager : MonoBehaviour {
 			Debug.Log ("--- Going To Enter Names ---");
 			Application.LoadLevel ("EnterNameScene");
 		} else {
-			showPopUp ();
-		}
-
+            Debug.Log("Failed to enter number of players");
+            showPopUp();
+        }
 	}
 
 	// Starts new game if no problems with names
-	public void startNewGame(){
-		
+	public void startNewGame() {
 		if (!GetPlayerNames2.gotProblem) {
 			Debug.Log ("--- Starting New Game ---");
 			lvlCount++;
@@ -84,20 +76,20 @@ public class LvlManager : MonoBehaviour {
 	}
 
 	// Overides and start game
-	public void startGameRegardless(){
+	public void startGameRegardless() {
 		Debug.Log ("--- Starting New Game ---");
 		Application.LoadLevel ("SwipeTestScene");
 	}
 
 	// Picks a level that can be repeatable
-	public string pickLvl(){
+	public string pickLvl() {
 		string picked = repeatableLvls [(int) Random.Range (0, repeatableLvls.Length)];
 		Debug.Log ("Picked Lvl: " + picked);
 		return picked;
 	}
 
 	// Goes to level picked
-	public void goNextLvl(){
+	public void goNextLvl() {
 		string picked = pickLvl ();
 
 		if (numPlayingPlayers == 1) {
@@ -118,7 +110,7 @@ public class LvlManager : MonoBehaviour {
 	}
 
 	public void goLastLvl() {
-		Debug.Log ("--- Going Last Level ---");
+		Debug.Log ("--- Going to Last Level ---");
 		Application.LoadLevel("CatchTestScene");
 	}
 
@@ -143,8 +135,8 @@ public class LvlManager : MonoBehaviour {
     }
 
 	// Exits the application
-	public void quitGame(){
-		Debug.Log ("--- Quiting Game ---");
-		Application.Quit ();
+	public void quitGame() {
+		Debug.Log("--- Quiting Game ---");
+		Application.Quit();
 	}
 }
