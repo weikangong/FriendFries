@@ -492,7 +492,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326894941
 GameObject:
@@ -4788,7 +4788,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 945995073}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -4949,7 +4949,7 @@ GameObject:
   - component: {fileID: 1052932983}
   - component: {fileID: 1052932982}
   m_Layer: 5
-  m_Name: Home Text
+  m_Name: HomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8364,7 +8364,7 @@ GameObject:
   - component: {fileID: 1160734311}
   - component: {fileID: 1160734310}
   m_Layer: 5
-  m_Name: Pause Text
+  m_Name: PauseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8811,7 +8811,7 @@ GameObject:
   - component: {fileID: 1666894745}
   - component: {fileID: 1666894744}
   m_Layer: 5
-  m_Name: Resume Text
+  m_Name: ResumeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9278,6 +9278,7 @@ MonoBehaviour:
   endMenu: {fileID: 0}
   popUp: {fileID: 1755032024}
   pause: 0
+  pauseButton: {fileID: 945995072}
   repeatableLvls:
   - DragTestScene
   - SqueezeTestScene
@@ -9324,7 +9325,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1930371920
 GameObject:

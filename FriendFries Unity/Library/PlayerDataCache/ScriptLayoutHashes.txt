@@ -97,7 +97,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 f55c41b8a7a9b15035f3fe9b7ffa939a Assembly-CSharp.dll:.PinchFunction
 76015de5fcb247eeb8df66c001d5a22d Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameRateCounter
-471e5127907db4650c6b57ab84531388 Assembly-CSharp.dll:.LvlManager
+984633230bcc6f805828fc44cab344fb Assembly-CSharp.dll:.LvlManager
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexJitter
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
@@ -215,7 +215,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.VR.WSA.Spa
 48a9dee325686d1924a2646b71c83f08 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
 dd5481137759597d614818793c90a7fe Assembly-CSharp.dll:.MovingLeftRightByTouch
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.TextConsoleSimulator
-b3ac06f084a6dc9d1921ca46bef043e7 Assembly-CSharp.dll:.GetNumPlayers
+86a396680781bcd2f3ca1aeab378f21c Assembly-CSharp.dll:.GetTeamInfo
 75cd0c6c744b9733ef29aa6c59ece2b1 Assembly-CSharp.dll:TMPro.Examples.VertexShakeB
 998c570f84856acafa7bd7b04e94e163 Assembly-CSharp.dll:.SwipeInfoAnimate
 afc52d27c3ec0bd47909e81bd45fbffa Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
@@ -226,3 +226,5 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerDrag
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HighScoreManager
+32683de70d6883321f05337c62b5746d Assembly-CSharp.dll:.DisplayHighScores

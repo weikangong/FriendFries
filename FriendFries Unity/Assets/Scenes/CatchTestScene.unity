@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 43682875}
   - component: {fileID: 43682874}
   m_Layer: 5
-  m_Name: Resume Text
+  m_Name: ResumeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,7 +1035,7 @@ GameObject:
   - component: {fileID: 415849303}
   - component: {fileID: 415849302}
   m_Layer: 5
-  m_Name: Pause Text
+  m_Name: PauseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 509421977}
   - component: {fileID: 509421976}
   m_Layer: 5
-  m_Name: Home Text
+  m_Name: HomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2518,7 +2518,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1757119446}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -2629,6 +2629,7 @@ MonoBehaviour:
   endMenu: {fileID: 0}
   popUp: {fileID: 1865408190}
   pause: 0
+  pauseButton: {fileID: 1757119445}
   repeatableLvls:
   - DragTestScene
   - SqueezeTestScene

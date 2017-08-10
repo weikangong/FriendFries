@@ -230,6 +230,7 @@ MonoBehaviour:
   endMenu: {fileID: 1503982431}
   popUp: {fileID: 0}
   pause: 0
+  pauseButton: {fileID: 0}
   repeatableLvls:
   - DragTestScene
   - SqueezeTestScene
@@ -449,7 +450,7 @@ GameObject:
   - component: {fileID: 1079245537}
   - component: {fileID: 1079245536}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Backdrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -837,11 +838,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d32cb5dc84600fc488f528bbac846218, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 357f0cafab31b83429a97e57883ff3b6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -919,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7103bd613f4e4647ad16a4a7283323b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: d32cb5dc84600fc488f528bbac846218, type: 3}
+  sound: {fileID: 8300000, guid: 357f0cafab31b83429a97e57883ff3b6, type: 3}
 --- !u!4 &1524766036
 Transform:
   m_ObjectHideFlags: 0
@@ -985,7 +986,7 @@ GameObject:
   - component: {fileID: 1826727401}
   - component: {fileID: 1826727400}
   m_Layer: 5
-  m_Name: Home Text
+  m_Name: HomeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
