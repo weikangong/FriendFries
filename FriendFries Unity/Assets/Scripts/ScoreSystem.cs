@@ -20,11 +20,6 @@ public class ScoreSystem : MonoBehaviour {
 		currScore = currScore + addScore;
 		Debug.Log("New Score: " + currScore);
 	}
-
-	// Resets score to 0
-	public void resetScore() {
-        currScore = 0;
-	}
 		
 	void setScoreText() {
 		scoreText.text = currScore.ToString();

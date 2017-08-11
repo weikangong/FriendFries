@@ -16,6 +16,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 c24a21b131bfa67be1162db2cba4b52b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 c3af898b5a5f5d31bed9ad263258cf67 Assembly-CSharp.dll:.SwipeFunctions
 998c570f84856acafa7bd7b04e94e163 Assembly-CSharp.dll:.DragInfoAnimate
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HighScoreManager
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -198,6 +199,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InGameSound
+32683de70d6883321f05337c62b5746d Assembly-CSharp.dll:.DisplayHighScores
 62229a3e4d53ca59bec192e89627ed52 Assembly-CSharp.dll:TMPro.Examples.CameraController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DestroyOnContact
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
@@ -226,5 +228,3 @@ af7666733efcc974926d7d470e1732a6 Assembly-CSharp.dll:TMPro.Examples.SkewTextExam
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PlayerDrag
 34e025057ef78b1bf238460cdf6583a3 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:TMPro.Examples.SimpleScript
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.HighScoreManager
-32683de70d6883321f05337c62b5746d Assembly-CSharp.dll:.DisplayHighScores

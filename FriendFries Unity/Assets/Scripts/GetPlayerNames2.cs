@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 // This script get player names from the player input boxes and 
 // save those names to a PlayerClass array. Requires script 
-// "GetNumPlayers" to work. It also randomly picks a single 
-// unpicked player to display every scene.
+// "GetTeamInfo" to work. It also randomly picks a single 
+// unpicked player to display every scene
 
 public class GetPlayerNames2 : MonoBehaviour {
 	public Text currPlayerText;

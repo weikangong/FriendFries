@@ -140,7 +140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.125, y: 317}
+  m_AnchoredPosition: {x: 0.125, y: 294}
   m_SizeDelta: {x: 800.25, y: 180.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133023517
@@ -297,8 +297,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 739, y: 226}
+  m_AnchoredPosition: {x: 6.9999733, y: -120.400024}
+  m_SizeDelta: {x: 670.1, y: 204.1}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &475117211
 MonoBehaviour:
@@ -710,6 +710,7 @@ GameObject:
   - component: {fileID: 821349833}
   - component: {fileID: 821349832}
   - component: {fileID: 821349831}
+  - component: {fileID: 821349834}
   m_Layer: 5
   m_Name: FriendFriesButton
   m_TagString: Untagged
@@ -732,8 +733,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 386.75}
-  m_SizeDelta: {x: 457.4, y: 437.2}
+  m_AnchoredPosition: {x: 5, y: 380}
+  m_SizeDelta: {x: 512.5, y: 515.2}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &821349831
 MonoBehaviour:
@@ -809,6 +810,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821349829}
+--- !u!114 &821349834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 821349829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 365489f8c6065694bb3f3c35f8c21c7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 3108485ca10ddf94c912a5337ab2fd9b, type: 3}
 --- !u!1 &984983152
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,8 +1082,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -370}
-  m_SizeDelta: {x: 739, y: 226}
+  m_AnchoredPosition: {x: 6.9999733, y: -472.6}
+  m_SizeDelta: {x: 670.1, y: 204.1}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1131264313
 MonoBehaviour:
@@ -1204,8 +1217,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -170}
-  m_SizeDelta: {x: 739, y: 226}
+  m_AnchoredPosition: {x: 7, y: -292}
+  m_SizeDelta: {x: 670.1, y: 204.1}
   m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1712129929
 MonoBehaviour:

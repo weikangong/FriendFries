@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//checks for num of fries left in spawner
-//will change to next scene if goNextLvl = true and frieslft = 0
-//destroys fries on contact with objects 
-
+// Checks for num of fries left in spawner
+// will change to next scene if goNextLvl = true and friesLeft = 0
+// destroys fries on contact with objects 
 public class ExitWallTrigger : MonoBehaviour {
-
 	public bool goNextLvl;
 	public bool isLastLvl;
 	public bool isFirstLvl;
 
 	bool allTouchedExitWall = false;
-	public string nextLevelName;
 	public float waitTime;
 	public int fontSize;
 
@@ -22,19 +19,16 @@ public class ExitWallTrigger : MonoBehaviour {
 
 	public GameObject nextLvl;
 
-	//destroys objects tagged with "potato" when they enter the trigger area
+	// Destroys objects tagged with "potato" when they enter the trigger area
 	void OnTriggerEnter2D(Collider2D other) {
-		
 		Debug.Log ("Collision with exit wall detected: " + other.gameObject.name);
 
 		if (other.gameObject.tag == "Potato") {
 			Destroy (other.gameObject);
 		}
-			
 	}
 
-	public void Update(){
-
+	public void Update() {
 		if (!isFirstLvl) {
 			GameObject frySpawner = GameObject.Find ("frySpawner");
 			SpawnObjects fryScript = frySpawner.GetComponent<SpawnObjects> ();
@@ -53,18 +47,17 @@ public class ExitWallTrigger : MonoBehaviour {
 			}
 		}
 
-		//changes scene
+		// Changes scene
 		if (goNextLvl && allTouchedExitWall) {
 			StartCoroutine ("WaitToLoad");
 		}
 	}
 
-	//loads next scene after a while
+	// Loads next scene after a while
 	IEnumerator WaitToLoad() {
 		yield return new WaitForSecondsRealtime (2);
 		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
-		//Application.LoadLevel (nextLevelName);
 		if (isLastLvl) {
 			nextLvl.GetComponent<LvlManager> ().endGame ();
 		} else {
@@ -72,11 +65,9 @@ public class ExitWallTrigger : MonoBehaviour {
 		}
 	}
 
-	//--------------------------------------------------------------------------------------------//
-	//Below is mostly used fro debugging, can just remove or comment out
-
-	void OnGUI() {
-
+    //--------------------------------------------------------------------------------------------//
+    // Below is mostly used for debugging, can just remove or comment out
+    void OnGUI() {
 		var centeredStyle = GUI.skin.GetStyle("Label");
 		centeredStyle.alignment = TextAnchor.UpperCenter;
 		centeredStyle.fontSize = fontSize;

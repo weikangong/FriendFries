@@ -59,15 +59,23 @@ public class HighScoreManager : MonoBehaviour {
                 }
             }
         }
-        for (int i = 1; i <= HighScores.Count; i++) {
-            Debug.Log("Team Name: " + HighScores[i - 1].name);
-            Debug.Log("Score: " + HighScores[i - 1].score);
-        }
+        
+        // Saving it into PlayerPrefs for permanent storage
         for (int i = 1;  i <= HighScoreSize && i <= HighScores.Count; i++) {
             PlayerPrefs.SetString("HighScore" + i + "name", HighScores[i - 1].name);
             PlayerPrefs.SetInt("HighScore" + i + "score", HighScores[i - 1].score);
         }
         return;
+    }
+
+    // Clear all high scores
+    public void ClearHighScore() {
+        List<Scores> HighScores = GetHighScore();
+
+        for (int i = 1; i <= HighScores.Count; i++) {
+            PlayerPrefs.DeleteKey("HighScore" + i + "name");
+            PlayerPrefs.DeleteKey("HighScore" + i + "score");
+        }
     }
 
     public List<Scores> GetHighScore() {
@@ -82,17 +90,6 @@ public class HighScoreManager : MonoBehaviour {
 
         return HighScores;
     }
-    
-    public void ClearLeaderBoard() {
-        List<Scores> HighScores = GetHighScore();
-
-        for (int i = 1; i <= HighScores.Count; i++) {
-            PlayerPrefs.DeleteKey("HighScore" + i + "name");
-            PlayerPrefs.DeleteKey("HighScore" + i + "score");
-        }
-    }
-    
-    void OnApplicationQuit() { PlayerPrefs.Save(); }
 }
 
 public class Scores {

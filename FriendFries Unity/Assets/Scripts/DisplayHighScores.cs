@@ -11,7 +11,7 @@ public class DisplayHighScores : MonoBehaviour {
 
 	void Start () {
         highScore = HighScoreManager._instance.GetHighScore();
-        Debug.Log(highScore.Count);
+
         for(int i = 0; i <= highScore.Count; i++) {
             if (highScore[i].name == "") teamName[i].text = (i+1) + ". No Name";
             else teamName[i].text = (i+1) + ". " + highScore[i].name;

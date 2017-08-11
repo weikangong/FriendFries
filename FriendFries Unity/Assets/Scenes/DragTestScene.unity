@@ -231,7 +231,7 @@ RectTransform:
   - {fileID: 945995070}
   - {fileID: 1755032025}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -767,7 +767,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1783798850}
-        m_MethodName: reset
+        m_MethodName: resetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4738,7 +4738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319, y: 616}
+  m_AnchoredPosition: {x: -320, y: 650}
   m_SizeDelta: {x: 96.1, y: 110.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945995071
@@ -8564,9 +8564,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fries: {fileID: 243426181}
-  waitingForNextSpawn: 2
-  theCountdown: 3
-  friesLeft: 5
+  waitingForNextSpawn: 0.5
+  theCountdown: 2
+  friesLeft: 30
   xMin: -2.5
   xMax: 1.5
   yMin: 7
@@ -8612,7 +8612,7 @@ Transform:
   m_Children:
   - {fileID: 1930371921}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1455438118
 MonoBehaviour:
@@ -9735,8 +9735,7 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 0
-  nextLevelName: SqueezeTestScene
   waitTime: 2
   fontSize: 45
-  nextPlayerMessage: Done
+  nextPlayerMessage: Done!
   nextLvl: {fileID: 1783798848}

@@ -24,6 +24,7 @@ public class LvlManager : MonoBehaviour {
 
 	// ----------------------------------------------------------- //
 	//UI functions
+    // Pause or resume the game, depending on the current state
 	public void pauseAndResumeGame() {
         if (GetComponent<Button>() != null) pauseButton = GetComponent<Button>();
 
@@ -59,11 +60,6 @@ public class LvlManager : MonoBehaviour {
 	}
 
     // Button functions
-    // Goes to scene for high score
-    public void goToHighScore() {
-        Debug.Log("--- Going To High Score ---");
-        SceneManager.LoadScene("HighScoreScene");
-    }
     // Goes to scene for players to enter team info
     public void goToEnterTeamInfo() {
         Debug.Log("--- Going To Enter Team Info ---");
@@ -71,10 +67,10 @@ public class LvlManager : MonoBehaviour {
     }
 
     // Goes to scene for players to enter names
-    public void goToEnterNames() {
+    public void goToEnterPlayerNames() {
 		if (!GetTeamInfo.gotProblem) {
 			Debug.Log ("--- Going To Enter Names ---");
-            SceneManager.LoadScene("EnterNameScene");
+            SceneManager.LoadScene("EnterPlayerNamesScene");
 		} else {
             Debug.Log("Failed to enter number of players");
             showPopUp();
@@ -85,18 +81,12 @@ public class LvlManager : MonoBehaviour {
 	public void startNewGame() {
 		if (!GetPlayerNames2.gotProblem) {
 			Debug.Log ("--- Starting New Game ---");
-			lvlCount++;
+			lvlCount+=2;
             SceneManager.LoadScene("SwipeTestScene");
 		} else {
 			Debug.Log ("--- Failed To Start New Game ---");
 			showPopUp ();
 		}
-	}
-
-	// Overides and start game
-	public void startGameRegardless() {
-		Debug.Log ("--- Starting New Game ---");
-        SceneManager.LoadScene("SwipeTestScene");
 	}
 
 	// Picks a level that can be repeatable
@@ -108,53 +98,59 @@ public class LvlManager : MonoBehaviour {
 
 	// Goes to level picked
 	public void goNextLvl() {
-		string picked = pickLvl ();
-
-		if (numPlayingPlayers == 1) {
-			endGame ();
-		}
-
-		if (lvlCount <= numPlayingPlayers) {
+        if (lvlCount < numPlayingPlayers) {
 			lvlCount++;
-			Debug.Log ("Lvl Count: " + lvlCount);
-            SceneManager.LoadScene(picked);
-		} 
-
-		if(lvlCount > numPlayingPlayers) {
-			lvlCount++;
-			goLastLvl();
-		}
+            Debug.Log("lvlCount: " + lvlCount);
+            SceneManager.LoadScene(pickLvl());
+		} else {
+            goLastLvl(); }
 			
 	}
 
+    // Goes to scene for catching the fries
 	public void goLastLvl() {
 		Debug.Log ("--- Going to Last Level ---");
 		SceneManager.LoadScene("CatchTestScene");
 	}
 
-	// Sends users back to the main menu scene
-	public void backtoMenu() {
+    // Goes to scene for end of game
+    public void endGame() {
+        Debug.Log("--- Going To End Menu ---");
+        SceneManager.LoadScene("EndGameScene");
+    }
+
+    // Goes to scene for menu
+    public void backtoMenu() {
 		Debug.Log ("--- Back to Menu ---");
         SceneManager.LoadScene("MenuScene");
 	}
 
-	public void endGame() {
-		Debug.Log ("--- Going To End Menu ---");
-        SceneManager.LoadScene("EndGameScene");
-	}
+    // Goes to scene for high score
+    public void goToHighScore() {
+        Debug.Log("--- Going To High Score ---");
+        SceneManager.LoadScene("HighScoreScene");
+    }
 
-    // Save team name and score and resets all info to 0
-	public void reset() {
-        if (Score != null) {
-            HighScoreManager._instance.SaveHighScore(GetTeamInfo.teamName, ScoreSystem.currScore);
-            Score.GetComponent<ScoreSystem>().resetScore(); // Resets score back to zero
-        }
+    // Save team name and score for high score
+    public void saveHighScore() {
+        HighScoreManager._instance.SaveHighScore(GetTeamInfo.teamName, ScoreSystem.currScore);
+    }
 
+    public void clearHighScore() {
+        HighScoreManager._instance.ClearHighScore();
+    }
+
+    // Resets all player info to 0
+	public void resetAll() {
         GetTeamInfo.teamName = "";
         GetTeamInfo.numPlayers = 0;
-        Debug.Log("Team Name reset to " + GetTeamInfo.teamName);
+        ScoreSystem.currScore = 0;
+        lvlCount = 0;
+
+        Debug.Log("Team Name reset to \"" + GetTeamInfo.teamName +"\"");
         Debug.Log("Number of players reset to " + GetTeamInfo.numPlayers);
         Debug.Log("Score resets to " + ScoreSystem.currScore);
+        Debug.Log("lvlCount resets to " + lvlCount);
     }
 
 	// Exits the application

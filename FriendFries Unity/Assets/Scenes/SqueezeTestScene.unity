@@ -3672,7 +3672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -319, y: 616}
+  m_AnchoredPosition: {x: -320, y: 650}
   m_SizeDelta: {x: 96.1, y: 110.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &185002786
@@ -7306,10 +7306,9 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 0
-  nextLevelName: CatchTestScene
   waitTime: 2
   fontSize: 45
-  nextPlayerMessage: Done
+  nextPlayerMessage: Done!
   nextLvl: {fileID: 875104745}
 --- !u!61 &309105388
 BoxCollider2D:
@@ -7422,7 +7421,7 @@ RectTransform:
   - {fileID: 158694626}
   - {fileID: 1347513095}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8231,7 +8230,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 875104747}
-        m_MethodName: reset
+        m_MethodName: resetAll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8744,7 +8743,7 @@ Transform:
   - {fileID: 848876067}
   - {fileID: 812453376}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1347513094
 GameObject:
@@ -8934,9 +8933,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fries: {fileID: 1960665274}
-  waitingForNextSpawn: 2
+  waitingForNextSpawn: 0.5
   theCountdown: 2
-  friesLeft: 5
+  friesLeft: 30
   xMin: 0
   xMax: 0.5
   yMin: 7

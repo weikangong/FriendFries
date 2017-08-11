@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/EnterTeamInfoScene.unity
     guid: cfc5162678acffb4c9ab10ded749f354
   - enabled: 1
-    path: Assets/Scenes/EnterNameScene.unity
+    path: Assets/Scenes/EnterPlayerNamesScene.unity
     guid: d7a8433950bdfe7409ad178fb27ab6e3
   - enabled: 1
     path: Assets/Scenes/SwipeTestScene.unity
