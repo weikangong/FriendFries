@@ -8565,7 +8565,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fries: {fileID: 243426181}
   waitingForNextSpawn: 0.5
-  theCountdown: 2
+  theCountdown: 3
   friesLeft: 30
   xMin: -2.5
   xMax: 1.5
@@ -9735,7 +9735,5 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 0
-  waitTime: 2
-  fontSize: 45
-  nextPlayerMessage: Done!
+  waitTime: 5
   nextLvl: {fileID: 1783798848}

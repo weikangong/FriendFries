@@ -469,8 +469,6 @@ MonoBehaviour:
   isLastLvl: 0
   isFirstLvl: 1
   waitTime: 2
-  fontSize: 45
-  nextPlayerMessage: Done
   nextLvl: {fileID: 0}
 --- !u!114 &428307570
 MonoBehaviour:
@@ -2210,9 +2208,7 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 1
-  waitTime: 2
-  fontSize: 45
-  nextPlayerMessage: 
+  waitTime: 5
   nextLvl: {fileID: 440843778}
 --- !u!1 &1298454979
 GameObject:

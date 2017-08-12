@@ -12,10 +12,6 @@ public class ExitWallTrigger : MonoBehaviour {
 
 	bool allTouchedExitWall = false;
 	public float waitTime;
-	public int fontSize;
-
-	bool showMessage = false;
-	public string nextPlayerMessage;
 
 	public GameObject nextLvl;
 
@@ -55,25 +51,11 @@ public class ExitWallTrigger : MonoBehaviour {
 
 	// Loads next scene after a while
 	IEnumerator WaitToLoad() {
-		yield return new WaitForSecondsRealtime (2);
-		showMessage = true;
 		yield return new WaitForSecondsRealtime (waitTime);
 		if (isLastLvl) {
 			nextLvl.GetComponent<LvlManager> ().endGame ();
 		} else {
 			nextLvl.GetComponent<LvlManager> ().goNextLvl ();
-		}
-	}
-
-    //--------------------------------------------------------------------------------------------//
-    // Below is mostly used for debugging, can just remove or comment out
-    void OnGUI() {
-		var centeredStyle = GUI.skin.GetStyle("Label");
-		centeredStyle.alignment = TextAnchor.UpperCenter;
-		centeredStyle.fontSize = fontSize;
-
-		if (showMessage) {
-			GUI.Label (new Rect (Screen.width/2 - 100, Screen.height/2 + 50, 200, 100), nextPlayerMessage, centeredStyle);
 		}
 	}
 }

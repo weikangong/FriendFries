@@ -53,12 +53,6 @@ public class LvlManager : MonoBehaviour {
 
 	}
 
-	public void gameOver() {
-		Debug.Log ("--- Game Finished ---");
-		endMenu.SetActive (true);
-
-	}
-
     // Button functions
     // Goes to scene for players to enter team info
     public void goToEnterTeamInfo() {
@@ -124,6 +118,13 @@ public class LvlManager : MonoBehaviour {
 		Debug.Log ("--- Back to Menu ---");
         SceneManager.LoadScene("MenuScene");
 	}
+
+    // Goes to scene for credits
+    public void goToCredits()
+    {
+        Debug.Log("--- Going To Credits Score ---");
+        SceneManager.LoadScene("CreditsScene");
+    }
 
     // Goes to scene for high score
     public void goToHighScore() {

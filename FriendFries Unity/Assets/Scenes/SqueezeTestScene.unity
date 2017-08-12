@@ -7306,9 +7306,7 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 0
-  waitTime: 2
-  fontSize: 45
-  nextPlayerMessage: Done!
+  waitTime: 5
   nextLvl: {fileID: 875104745}
 --- !u!61 &309105388
 BoxCollider2D:
@@ -8934,7 +8932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fries: {fileID: 1960665274}
   waitingForNextSpawn: 0.5
-  theCountdown: 2
+  theCountdown: 3
   friesLeft: 30
   xMin: 0
   xMax: 0.5
