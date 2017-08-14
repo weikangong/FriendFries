@@ -46,40 +46,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game C#\CheeseGrate.cs" />
-     <Compile Include="Assets\Game C#\CollisionCounter.cs" />
-     <Compile Include="Assets\Game C#\CountCaughtFries.cs" />
-     <Compile Include="Assets\Game C#\DestroyOnContact.cs" />
-     <Compile Include="Assets\Game C#\ExitWallTrigger.cs" />
-     <Compile Include="Assets\Game C#\GetNumPlayers.cs" />
-     <Compile Include="Assets\Game C#\GetPlayerNames2.cs" />
-     <Compile Include="Assets\Game C#\InfoAnimation\CatchInfoAnimate.cs" />
-     <Compile Include="Assets\Game C#\InfoAnimation\DragInfoAnimate.cs" />
-     <Compile Include="Assets\Game C#\InfoAnimation\SqueezeInfoAnimate.cs" />
-     <Compile Include="Assets\Game C#\InfoAnimation\SwipeInfoAnimate.cs" />
-     <Compile Include="Assets\Game C#\LvlManager.cs" />
-     <Compile Include="Assets\Game C#\MovingLeftRightByTouch.cs" />
-     <Compile Include="Assets\Game C#\NewDragFunction.cs" />
-     <Compile Include="Assets\Game C#\NewSwipeFunctions.cs" />
-     <Compile Include="Assets\Game C#\PinchFunction.cs" />
-     <Compile Include="Assets\Game C#\PlayerDrag.cs" />
-     <Compile Include="Assets\Game C#\PlayerSwipe.cs" />
-     <Compile Include="Assets\Game C#\ScoreSystem.cs" />
-     <Compile Include="Assets\Game C#\SpawnObjects.cs" />
-     <Compile Include="Assets\Game C#\SwipeFunctions.cs" />
-     <Compile Include="Assets\Game C#\TiltMovement.cs" />
-     <Compile Include="Assets\Menu Scripts\ActiveStateToggler.cs" />
-     <Compile Include="Assets\Menu Scripts\ApplicationManager.cs" />
-     <Compile Include="Assets\Menu Scripts\ChangeColor.cs" />
-     <Compile Include="Assets\Menu Scripts\DragMe.cs" />
-     <Compile Include="Assets\Menu Scripts\DragPanel.cs" />
-     <Compile Include="Assets\Menu Scripts\DropMe.cs" />
-     <Compile Include="Assets\Menu Scripts\PanelManager.cs" />
-     <Compile Include="Assets\Menu Scripts\ResizePanel.cs" />
-     <Compile Include="Assets\Menu Scripts\ScrollDetailTexture.cs" />
-     <Compile Include="Assets\Menu Scripts\ShowSliderValue.cs" />
-     <Compile Include="Assets\Menu Scripts\TiltWindow.cs" />
-     <Compile Include="Assets\Menu Scripts\loadSceneOnClick.cs" />
+     <Compile Include="Assets\Scripts\CheeseGrate.cs" />
+     <Compile Include="Assets\Scripts\ClickSound.cs" />
+     <Compile Include="Assets\Scripts\CollisionCounter.cs" />
+     <Compile Include="Assets\Scripts\CountCaughtFries.cs" />
+     <Compile Include="Assets\Scripts\DestroyOnContact.cs" />
+     <Compile Include="Assets\Scripts\DisplayHighScores.cs" />
+     <Compile Include="Assets\Scripts\ExitWallTrigger.cs" />
+     <Compile Include="Assets\Scripts\GetPlayerNames2.cs" />
+     <Compile Include="Assets\Scripts\GetTeamInfo.cs" />
+     <Compile Include="Assets\Scripts\HighScoreManager.cs" />
+     <Compile Include="Assets\Scripts\InGameSound.cs" />
+     <Compile Include="Assets\Scripts\InfoAnimation\CatchInfoAnimate.cs" />
+     <Compile Include="Assets\Scripts\InfoAnimation\DragInfoAnimate.cs" />
+     <Compile Include="Assets\Scripts\InfoAnimation\SqueezeInfoAnimate.cs" />
+     <Compile Include="Assets\Scripts\InfoAnimation\SwipeInfoAnimate.cs" />
+     <Compile Include="Assets\Scripts\LvlManager.cs" />
+     <Compile Include="Assets\Scripts\MenuSound.cs" />
+     <Compile Include="Assets\Scripts\MovingLeftRightByTouch.cs" />
+     <Compile Include="Assets\Scripts\NewDragFunction.cs" />
+     <Compile Include="Assets\Scripts\NewSwipeFunctions.cs" />
+     <Compile Include="Assets\Scripts\PinchFunction.cs" />
+     <Compile Include="Assets\Scripts\PlayerDrag.cs" />
+     <Compile Include="Assets\Scripts\PlayerSwipe.cs" />
+     <Compile Include="Assets\Scripts\ScoreSystem.cs" />
+     <Compile Include="Assets\Scripts\SpawnObjects.cs" />
+     <Compile Include="Assets\Scripts\SwipeFunctions.cs" />
+     <Compile Include="Assets\Scripts\TiltMovement.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples\Scripts\Benchmark02.cs" />
@@ -120,11 +113,9 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-     <None Include="Assets\Main Menu\Fonts\Jupiter\LICENSE.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-     <None Include="Assets\Main Menu\Textures and Sprites\SF UI\Background\LICENSE.txt" />
      <None Include="Assets\TextMesh Pro\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -132,7 +123,6 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-     <None Include="Assets\Main Menu\Materials\UI-Default-No-Alpha.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\Bangers - OFL.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -156,7 +146,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="TextMeshPro-1.0.55.56.0b11">
- <HintPath>C:/Users/vik/Desktop/Orbital SaltyPotato/saltypotato/FriendFries Unity/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b11.dll</HintPath>
+ <HintPath>C:/Users/vik/Desktop/FriendFries V2/saltypotato/FriendFries Unity/Assets/TextMesh Pro/Plugins/TextMeshPro-1.0.55.56.0b11.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

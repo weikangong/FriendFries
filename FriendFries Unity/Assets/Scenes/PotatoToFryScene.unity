@@ -371,7 +371,7 @@ SpriteRenderer:
   m_SortingLayerID: -388812121
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2ba3b4ec940b10d479c708269ba17c2c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d685c11d3ca1f9e43b05e19a1d2ccbc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -568,10 +568,8 @@ MonoBehaviour:
   goNextLvl: 1
   isLastLvl: 0
   isFirstLvl: 0
-  nextLevelName: DragTestScene
   waitTime: 1.5
-  fontSize: 40
-  nextPlayerMessage: Done
+  nextLvl: {fileID: 0}
 --- !u!61 &836592891
 BoxCollider2D:
   m_ObjectHideFlags: 0
