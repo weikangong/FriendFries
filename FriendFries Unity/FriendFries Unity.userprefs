@@ -1,14 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Game C#\InfoAnimation\CatchInfoAnimate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnObjects.cs">
     <Files>
-      <File FileName="Assets\Game C#\ExitWallTrigger.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game C#\LvlManager.cs" Line="78" Column="3" />
-      <File FileName="Assets\Game C#\ScoreSystem.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game C#\GetPlayerNames2.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game C#\CountCaughtFries.cs" Line="1" Column="1" />
-      <File FileName="Assets\Game C#\GetNumPlayers.cs" Line="12" Column="16" />
-      <File FileName="Assets\Game C#\InfoAnimation\CatchInfoAnimate.cs" Line="12" Column="36" />
+      <File FileName="Assets\Scripts\SpawnObjects.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

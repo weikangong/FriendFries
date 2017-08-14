@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/SwipeTestScene.unity
-=======
-- path: Assets/Scenes/MenuScene.unity
->>>>>>> cf808bd10b69108f91a4a14a231ec583e0092019
   isLoaded: 1
   isActive: 1

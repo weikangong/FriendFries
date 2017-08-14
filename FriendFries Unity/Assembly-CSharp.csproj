@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\CountCaughtFries.cs" />
      <Compile Include="Assets\Scripts\DestroyOnContact.cs" />
      <Compile Include="Assets\Scripts\DisplayHighScores.cs" />
+     <Compile Include="Assets\Scripts\DisplayQuote.cs" />
      <Compile Include="Assets\Scripts\ExitWallTrigger.cs" />
      <Compile Include="Assets\Scripts\GetPlayerNames2.cs" />
      <Compile Include="Assets\Scripts\GetTeamInfo.cs" />

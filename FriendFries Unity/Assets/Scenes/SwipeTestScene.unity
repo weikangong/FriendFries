@@ -1985,8 +1985,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1066645009}
   m_LocalRotation: {x: -0, y: -0, z: -0.3460724, w: 0.9382078}
-  m_LocalPosition: {x: 9.02, y: 4.52, z: 1}
-  m_LocalScale: {x: 0.6308215, y: 0.74780726, z: 0.5926894}
+  m_LocalPosition: {x: 8.99, y: 4.48, z: 1}
+  m_LocalScale: {x: 0.5006152, y: 0.5934542, z: 0.47035384}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2235,13 +2235,13 @@ MonoBehaviour:
   SpawnFry: {fileID: 1066645009}
   maxTime: 0.5
   minSwipeDist: 10
-  waitingForNextSpawn: 0.5
+  waitingForNextSpawn: 0.7
   theCountdown: 3
   friesLeft: 30
   xMin: -2
   xMax: 2
-  yMin: 0
-  yMax: 0
+  yMin: -1
+  yMax: 2
 --- !u!4 &1298454981
 Transform:
   m_ObjectHideFlags: 0

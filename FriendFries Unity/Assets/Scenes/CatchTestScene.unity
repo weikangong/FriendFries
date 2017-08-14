@@ -560,8 +560,11 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.4853761, y: -3.5229402}
-  - {x: 1.637226, y: -3.462199}
+  - {x: -2.007587, y: -0.39538255}
+  - {x: -1.524202, y: -3.0138614}
+  - {x: 0.026063425, y: -3.4440084}
+  - {x: 1.654622, y: -3.0447283}
+  - {x: 2.0816672, y: -0.49729228}
 --- !u!114 &93229724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,9 +1380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fries: {fileID: 865978067}
-  waitingForNextSpawn: 0.5
+  waitingForNextSpawn: 0.35
   theCountdown: 3
-  friesLeft: 30
+  friesLeft: 50
   xMin: -2.5
   xMax: 2.5
   yMin: 7
@@ -1625,7 +1628,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.3
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
