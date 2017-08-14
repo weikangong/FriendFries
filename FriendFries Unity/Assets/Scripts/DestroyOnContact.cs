@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//destroy objects on trigger enter
-
+// Destroy objects on trigger enter
 public class DestroyOnContact : MonoBehaviour {
-
 	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("Collision detected: " + other.gameObject.name);
 

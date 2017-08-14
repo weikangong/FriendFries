@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Swiping any object with tag "potato" will cause object to move in direction.
-// No diagonal directions. will move only if object is touched.
+// Swiping any object with tag "potato" will cause object to move in direction
+// No diagonal directions. will move only if object is touched
 public class SwipeFunctions : MonoBehaviour {
-
 	public GameObject Player;
 	public GameObject SpawnFry;
 

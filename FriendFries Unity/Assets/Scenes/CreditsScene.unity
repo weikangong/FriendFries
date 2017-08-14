@@ -533,6 +533,7 @@ GameObject:
   - component: {fileID: 806470748}
   - component: {fileID: 806470747}
   - component: {fileID: 806470746}
+  - component: {fileID: 806470750}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -604,6 +605,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &806470750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 806470745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbbfdbb0d314c64b8103a9308a2b836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quotes:
+  - '"For those fries who need a little spice."'
+  - '"Fries before guys."'
+  - '"Keep calm and keep frying"'
+  quote: {fileID: 807455582}
 --- !u!1 &807455579
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +703,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '"For those fries who need a little spice"'
+  m_Text: '"--------------
+
+    -------------"'
 --- !u!222 &807455583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -928,7 +947,7 @@ GameObject:
   - component: {fileID: 1140984734}
   - component: {fileID: 1140984733}
   m_Layer: 5
-  m_Name: Names (1)
+  m_Name: Orbital2017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1230,7 +1249,7 @@ GameObject:
   - component: {fileID: 1865220763}
   - component: {fileID: 1865220762}
   m_Layer: 5
-  m_Name: Names
+  m_Name: TeamName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1300,7 +1319,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wei Kang & Victoria
+  m_Text: saltypotato
 --- !u!222 &1865220764
 CanvasRenderer:
   m_ObjectHideFlags: 0
