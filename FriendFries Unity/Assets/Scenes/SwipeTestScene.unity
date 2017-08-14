@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Score: {fileID: 2055415827}
-  points: 100
+  points: 20
 --- !u!1 &440843778
 GameObject:
   m_ObjectHideFlags: 0

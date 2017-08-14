@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // Checks for num of fries left in spawner
 // will change to next scene if goNextLvl = true and friesLeft = 0
@@ -51,6 +52,9 @@ public class ExitWallTrigger : MonoBehaviour {
 
 	// Loads next scene after a while
 	IEnumerator WaitToLoad() {
+		//yield return new WaitForSecondsRealtime (2);
+		//SceneManager.LoadScene ("PotatoToFry");
+
 		yield return new WaitForSecondsRealtime (waitTime);
 		if (isLastLvl) {
 			nextLvl.GetComponent<LvlManager> ().endGame ();

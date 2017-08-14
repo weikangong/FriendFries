@@ -9,7 +9,11 @@ public class DisplayQuote : MonoBehaviour {
     {
         "\"For those fries who need a little spice.\"",
         "\"Fries before guys.\"",
-        "\"Keep calm and keep frying\""
+        "\"Keep calm and keep frying\"",
+		"\"Live, Laugh, Potato\"",
+		"\"I'm a tiny potato, and I believe in you\"",
+		"\"Keep your friends close, but keep your fries closer\"",
+		"\"Exersise? More like extra fries\"",
     };
     public Text quote;
 
