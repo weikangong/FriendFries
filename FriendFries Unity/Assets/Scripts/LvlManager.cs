@@ -83,21 +83,20 @@ public class LvlManager : MonoBehaviour {
 		}
 	}
 
-	// Picks a level that can be repeatable
-	public string pickLvl() {
-		string picked = repeatableLvls [(int) Random.Range (0, repeatableLvls.Length)];
+	// Randomly picks a level that can be repeatable
+	public string pick(string[] repeatablLvls) {
+		string picked = repeatableLvls[(int) Random.Range (0, repeatableLvls.Length)];
 		Debug.Log ("Picked Lvl: " + picked);
 		return picked;
 	}
 
-	// Goes to level picked
+	// Goes to level picked randomly
 	public void goNextLvl() {
         if (lvlCount < numPlayingPlayers) {
 			lvlCount++;
             Debug.Log("lvlCount: " + lvlCount);
-            SceneManager.LoadScene(pickLvl());
-		} else {
-            goLastLvl(); }
+            SceneManager.LoadScene(pick(repeatableLvls));
+		} else { goLastLvl(); }
 			
 	}
 
@@ -119,9 +118,8 @@ public class LvlManager : MonoBehaviour {
         SceneManager.LoadScene("MenuScene");
 	}
 
-    // Goes to scene for credits
-    public void goToCredits()
-    {
+    // Goes to scene for credits and randomly pick a quote
+    public void goToCredits() {
         Debug.Log("--- Going To Credits Score ---");
         SceneManager.LoadScene("CreditsScene");
     }
