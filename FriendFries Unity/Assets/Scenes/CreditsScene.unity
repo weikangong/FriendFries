@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -87,7 +87,7 @@ LightmapSettings:
     m_PVRFilteringAtrousNormalSigma: 1
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -618,11 +618,11 @@ MonoBehaviour:
   quotes:
   - '"For those fries who need a little spice."'
   - '"Fries before guys."'
-  - '"Keep calm and keep frying"'
-  - '"Live, Laugh, Potato"'
-  - '"I''m a tiny potato, and I believe in you"'
-  - '"Keep your friends close, but keep your fries closer"'
-  - '"Exersise? More like extra fries"'
+  - '"Keep calm and keep frying."'
+  - '"Live, Laugh, Potato."'
+  - '"I''m a tiny potato, and I believe in you."'
+  - '"Keep your friends close, but keep your fries closer."'
+  - '"Exersise? More like extra fries."'
   quote: {fileID: 807455582}
 --- !u!1 &807455579
 GameObject:
@@ -771,6 +771,8 @@ SpriteRenderer:
   m_Size: {x: 12, y: 19.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!4 &1072783751
 Transform:
   m_ObjectHideFlags: 0
@@ -1274,8 +1276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -53.99997, y: -496.8}
-  m_SizeDelta: {x: 763, y: 82.4}
+  m_AnchoredPosition: {x: -53.99997, y: -525}
+  m_SizeDelta: {x: 763, y: 138.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1865220762
 MonoBehaviour:
@@ -1323,7 +1325,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team: SaltyPotato'
+  m_Text: 'Team: SaltyPotato
+
+    Version 1.0.0'
 --- !u!222 &1865220764
 CanvasRenderer:
   m_ObjectHideFlags: 0

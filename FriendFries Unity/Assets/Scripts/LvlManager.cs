@@ -90,18 +90,24 @@ public class LvlManager : MonoBehaviour {
 		return picked;
 	}
 
-	// Goes to level picked randomly
-	public void goNextLvl() {
+    // Goes to level picked randomly
+    public void goLoadingScene() {
+       Debug.Log("--- Going to Loading Level ---");
+       SceneManager.LoadScene("PotatoToFryScene");
+    }
+
+    // Goes to level picked randomly
+    public void goNextScene() {
         if (lvlCount < numPlayingPlayers) {
 			lvlCount++;
             Debug.Log("lvlCount: " + lvlCount);
             SceneManager.LoadScene(pick(repeatableLvls));
-		} else { goLastLvl(); }
+		} else { goLastScene(); }
 			
 	}
 
     // Goes to scene for catching the fries
-	public void goLastLvl() {
+	public void goLastScene() {
 		Debug.Log ("--- Going to Last Level ---");
 		SceneManager.LoadScene("CatchTestScene");
 	}

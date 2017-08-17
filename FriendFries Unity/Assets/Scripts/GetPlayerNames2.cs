@@ -146,7 +146,7 @@ public class GetPlayerNames2 : MonoBehaviour {
 	bool checkSameName() {
 		for (int x = 0; x < numPlayingPlayers; x++) { // Loop through players
 			for (int y = x + 1; y < numPlayingPlayers; y++) { // Loop through other players
-				if ((players[x] == null || players[y] == null) && players[x].getName().Equals (players[y].getName())) {
+				if (players[x].getName().Equals (players[y].getName())) {
 					Debug.Log ("Same name");
 					return true;
 				}

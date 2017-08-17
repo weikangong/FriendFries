@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 // will change to next scene if goNextLvl = true and friesLeft = 0
 // destroys fries on contact with objects 
 public class ExitWallTrigger : MonoBehaviour {
-	public bool goNextLvl;
-	public bool isLastLvl;
-	public bool isFirstLvl;
+	public bool isLastScene;
+	public bool isFirstScene;
+    public bool isLoadingScene;
 
 	bool allTouchedExitWall = false;
 	public float waitTime;
@@ -26,7 +26,7 @@ public class ExitWallTrigger : MonoBehaviour {
 	}
 
 	public void Update() {
-		if (!isFirstLvl) {
+		if (!isFirstScene) {
 			GameObject frySpawner = GameObject.Find ("frySpawner");
 			SpawnObjects fryScript = frySpawner.GetComponent<SpawnObjects> ();
 
@@ -35,7 +35,7 @@ public class ExitWallTrigger : MonoBehaviour {
 			}
 		}
 
-		if (isFirstLvl) {
+		if (isFirstScene) {
 			GameObject fryspawner = GameObject.Find ("SwipeTester");
 			SwipeFunctions fryScript = fryspawner.GetComponent<SwipeFunctions> ();
 
@@ -45,21 +45,23 @@ public class ExitWallTrigger : MonoBehaviour {
 		}
 
 		// Changes scene
-		if (goNextLvl && allTouchedExitWall) {
+		if (allTouchedExitWall) {
 			StartCoroutine ("WaitToLoad");
 		}
 	}
 
 	// Loads next scene after a while
 	IEnumerator WaitToLoad() {
-		//yield return new WaitForSecondsRealtime (2);
-		//SceneManager.LoadScene ("PotatoToFry");
+        yield return new WaitForSecondsRealtime (waitTime);
 
-		yield return new WaitForSecondsRealtime (waitTime);
-		if (isLastLvl) {
-			nextLvl.GetComponent<LvlManager> ().endGame ();
-		} else {
-			nextLvl.GetComponent<LvlManager> ().goNextLvl ();
-		}
+        if (isLoadingScene) { 
+            nextLvl.GetComponent<LvlManager>().goNextScene();
+        }
+        else if(isLastScene) {
+            nextLvl.GetComponent<LvlManager>().endGame();
+        }
+        else {
+            nextLvl.GetComponent<LvlManager>().goLoadingScene();
+        }
 	}
 }
